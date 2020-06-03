@@ -1,0 +1,14 @@
+.about-page {
+    background-color: black;
+    color: white;
+}
+
+.contact-page {
+    background-color: grey;
+    color: white;
+}
+
+.home-page {
+    background-color: white;
+    color: black
+}
