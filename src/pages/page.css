@@ -1,14 +1,17 @@
 .about-page {
     background-color: black;
     color: white;
+    min-height: 100vh;
 }
 
 .contact-page {
     background-color: grey;
     color: white;
+    min-height: 100vh;
 }
 
 .home-page {
     background-color: white;
-    color: black
+    color: black;
+    min-height: 100vh;
 }

@@ -1,3 +1,11 @@
+Ok how am I going to do this?
+Two bits of state, currentPage and invisiblePage, each 'black' or 'white' for css classes
+One page has class currentPage, the others have invisiblePage
+After transition, switch the component that has currentPage and the value of currentPage
+
+https://lucas-perret.com/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
