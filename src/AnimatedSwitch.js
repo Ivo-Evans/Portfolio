@@ -6,26 +6,46 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 
+const routesTemplate = [
+    {
+        path: "/about",
+        component: 'About',
+    },
+    {
+        path: "/contact",
+        component: 'Contact',
+    },
+    {
+        path: "/",
+        component: 'Home',
+    }
+]
+
+const routesLibrary = {About, Contact, Home}
+
 const exitFunction = (event) => {
     // console.log('hello world', event)
 }
 
 export default function AnimatedSwitch() {
+
     let location = useLocation();
-    console.log(location)
+
+
+    
+    const [routes, ] = React.useState(routesTemplate)
+
     return (
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="slide" timeout={1000} onExit={exitFunction}>
             <Switch location={location}>
-                <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route exact path="/contact">
-                    <Contact />
-                </Route>
-                <Route path="/">
-                    <Home />
-                </Route>
+            {routes.map(route => {
+                return (
+                    <Route path={route.path}>
+                        {routesLibrary[route.component]}
+                    </Route>
+                )
+            })}
             </Switch>
           </CSSTransition>
         </TransitionGroup>
