@@ -1,3 +1,16 @@
+
+OK, so the general strategy is to have two css classes corresponding to two bits of state, but the correspondence should switch each turn. 
+
+If currentPage is black, notCurrentPage will be white
+After a transition, three things will happen simultaneusly:
+    - the page that previously had notCurrentPage will get currentPage
+    - the value of currentPage will switch - it will now be white
+    - the value of notCurrentPage will also switch (to black) - so when the next transition happens, it will start off in the right colour.
+  
+The important question is _queueing_. It is making sure that the next page has the right colour, after completing one page transition. That is what these steps achieve.
+-----
+
+
 Ok how am I going to do this?
 Two bits of state, currentPage and invisiblePage, each 'black' or 'white' for css classes
 One page has class currentPage, the others have invisiblePage

@@ -3,8 +3,6 @@ import Nav from "../Nav";
 import './page.css'
 
 export default function About({classInjection}) {
-console.log("About -> classInjection", classInjection)
-    
   return (
     <div className={classInjection}>
       <Nav />
