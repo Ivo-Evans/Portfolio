@@ -25,9 +25,15 @@ const AnimatedSwitch = () => {
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="slide" timeout={1000} onExit={exitFunction}>
             <Switch location={location}>
-              <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contact} />
-              <Route path="/" component={Home}/>
+                <Route exact path="/about">
+                    <About />
+                </Route>
+                <Route exact path="/contact">
+                    <Contact />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
             </Switch>
           </CSSTransition>
         </TransitionGroup>
