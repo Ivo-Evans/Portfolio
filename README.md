@@ -3,6 +3,48 @@ Two bits of state, currentPage and invisiblePage, each 'black' or 'white' for cs
 One page has class currentPage, the others have invisiblePage
 After transition, switch the component that has currentPage and the value of currentPage
 
+switching the value of currentPage with invisiblePage will be really easy
+
+```
+const changeClasses = () => {
+    const intermediaryValue = invisiblePage
+    setInvisiblePage(currentPage)
+    setCurrentPage(intermediaryValue)
+}
+```
+
+Somewhat less easy will be switching the class of the currentpage But only somewhat less easy. The onExit event could have a function like this:
+
+```
+(event) => {moveClasses(event)}
+```
+
+and then moveClasses could look like this, or something like it
+
+```
+const moveClasses = (event) => {
+    const page = event.target.location << or something like that
+    // routes should be a piece of state where each route is an object in an array
+    const newRoutes = JSON.parse(JSON.stringify(routes)) // this method of deep copy wont work for components
+    return newRoutes.map(route => {
+        
+    })
+
+}
+```
+
+```
+// render routes like this
+    return routes.map(route => {
+        return (
+            <Route exact path={route.path}>
+                {route.component}
+            </Route>
+        )
+    })
+
+```
+
 https://lucas-perret.com/
 
 
