@@ -10,14 +10,17 @@ const routesTemplate = [
     {
         path: "/about",
         component: 'About',
+        class: "page--white"
     },
     {
         path: "/contact",
         component: 'Contact',
+        class: "page--black"
     },
     {
         path: "/",
         component: 'Home',
+        class: "page--white"
     }
 ]
 
@@ -27,12 +30,16 @@ const exitFunction = (event) => {
     // console.log('hello world', event)
 }
 
+const makeNewPage = (route) => {
+    return React.createElement(
+        routesLibrary[route.component],
+        {'classInjection': route.class}
+    )
+}
+
+
 export default function AnimatedSwitch() {
-
     let location = useLocation();
-
-
-    
     const [routes, ] = React.useState(routesTemplate)
 
     return (
@@ -42,7 +49,7 @@ export default function AnimatedSwitch() {
             {routes.map(route => {
                 return (
                     <Route path={route.path}>
-                        {routesLibrary[route.component]}
+                     {makeNewPage(route)}
                     </Route>
                 )
             })}
