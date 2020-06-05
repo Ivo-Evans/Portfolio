@@ -39,14 +39,13 @@ export default function AnimatedSwitch() {
     const [notCurrentPage, setNotCurrentPage] = React.useState('page--black')
     const [newStyles, setNewStyles] = React.useState(0)
 
-    // this useEffect sets up logic for the next transition after a transition finishes
+    // this useEffect sets up logic for the next transition after a transition finishes, and when the website first renders
     React.useEffect(() => {
         // step 1: switch the page that has the currentPage class
         const newRoutes = routes.map(route => {
             const newRoute = {...route}
             if (route.path === location.pathname) {
                 newRoute.class = currentPage
-                // console.log(true)
             } else {
                 newRoute.class = notCurrentPage
             }
@@ -57,6 +56,7 @@ export default function AnimatedSwitch() {
 
         
         // step 2: switch the values of currentPage and notCurrentPage
+        // if you wanted more than two switching classes, you would do so by factoring out step 2 into its own function with custom logic
         const intermediary = notCurrentPage
         setNotCurrentPage(currentPage)
         setCurrentPage(intermediary)

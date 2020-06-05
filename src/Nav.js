@@ -1,12 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Nav.css";
 
 export default function Nav() {
-    return (
-        <div>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/">Home</Link>
-        </div>
-    )
+  const location = useLocation();
+
+    const disableIfRequired = (pathname) => {
+        console.log(pathname)
+        if (location.pathname === pathname) {
+            return 'link--disabled'
+        }
+        return ("")
+    }
+
+  return (
+    <div>
+      <Link className={disableIfRequired("/about")} to="/about">About</Link>
+      <Link className={disableIfRequired("/contact")} to="/contact">Contact</Link>
+      <Link className={disableIfRequired("/")} to="/">Home</Link>
+    </div>
+  );
 }
