@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Nav.css";
-import resume from './resume.pdf'
+import resume from './pages/resume.pdf'
 
 export default function Nav() {
   const location = useLocation();

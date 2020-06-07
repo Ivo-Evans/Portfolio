@@ -41,7 +41,7 @@
   }
 
 .page--white .nav a::before {
-    background-color: black;
+    background-color: hsl(31, 100%, 47%);
 }
 
 .page--black .nav a::before {
@@ -59,9 +59,21 @@
 
 
 /* This number will have to change as you add more nav links */
-@media screen and (max-width: 420px) {
-    .nav__right {
-        display: flex;
-        flex-direction: column;
+@media screen and (max-width: 750px) {
+
+    .nav {
+        padding-top: 1em;
+        display: initial;
     }
+
+    .nav__left {
+        display: block;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin-right: 70vw;
+        margin-left: 0;
+    }
+
   }
