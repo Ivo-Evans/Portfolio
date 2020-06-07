@@ -5,8 +5,8 @@ import "./Nav.css";
 export default function Nav() {
   const location = useLocation();
 
+    // interesting: this is a different design pattern to in AnimatedSwitch. Instead of mapping over and recreating elements in AnimatedSwitch, you could also have kept a list of pages to see which one was current, hardcoded each Link, and then done a conditional in className
     const disableIfRequired = (pathname) => {
-        console.log(pathname)
         if (location.pathname === pathname) {
             return 'link--disabled'
         }
@@ -14,10 +14,13 @@ export default function Nav() {
     }
 
   return (
-    <div>
-      <Link className={disableIfRequired("/about")} to="/about">About</Link>
-      <Link className={disableIfRequired("/contact")} to="/contact">Contact</Link>
-      <Link className={disableIfRequired("/")} to="/">Home</Link>
+    <div className="nav">
+      <Link className={disableIfRequired("/") + " home"} to="/">Home</Link>
+      <div className="nav__right">
+          <Link className={disableIfRequired("/about")} to="/about">About me</Link>
+          <Link className={disableIfRequired("/work")} to="/work">My work</Link>
+          <Link className={disableIfRequired("/contact")} to="/contact">Contact</Link>
+      </div>
     </div>
   );
 }

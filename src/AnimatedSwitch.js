@@ -5,11 +5,16 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
+import Work from "./pages/work"
 
 const routesTemplate = [
     {
         path: "/about",
         component: 'About',
+    },
+    {
+        path: "/work",
+        component: "Work",
     },
     {
         path: "/contact",
@@ -18,10 +23,10 @@ const routesTemplate = [
     {
         path: "/",
         component: 'Home',
-    }
+    },
 ]
 
-const routesLibrary = {About, Contact, Home}
+const routesLibrary = {About, Contact, Home, Work}
 
 
 const makeNewPage = (route) => {
