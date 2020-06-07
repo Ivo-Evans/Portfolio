@@ -20,8 +20,8 @@ export default function Nav() {
       <div className="nav__right">
           <Link className={disableIfRequired("/about")} to="/about">About me</Link>
           <Link className={disableIfRequired("/work")} to="/work">My work</Link>
-          <Link className={disableIfRequired("/contact")} to="/contact">Contact</Link>
-          <a href={resume}>Resume</a>
+          <a target="_blank" rel="noopener noreferrer" href={resume}>Resume</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ivo-Evans">GitHub</a>
       </div>
     </div>
   );
