@@ -3,8 +3,8 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import About from "./pages/about";
-import Contact from "./pages/contact";
 import Home from "./pages/home";
+import Work from "./pages/work"
 
 const routesTemplate = [
     {
@@ -12,16 +12,16 @@ const routesTemplate = [
         component: 'About',
     },
     {
-        path: "/contact",
-        component: 'Contact',
+        path: "/work",
+        component: "Work",
     },
     {
         path: "/",
         component: 'Home',
-    }
+    },
 ]
 
-const routesLibrary = {About, Contact, Home}
+const routesLibrary = {About, Home, Work}
 
 
 const makeNewPage = (route) => {
