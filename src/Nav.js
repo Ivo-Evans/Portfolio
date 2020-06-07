@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Nav.css";
+import resume from './resume.pdf'
 
 export default function Nav() {
   const location = useLocation();
@@ -15,11 +16,12 @@ export default function Nav() {
 
   return (
     <div className="nav">
-      <Link className={disableIfRequired("/") + " home"} to="/">Home</Link>
+      <Link className={disableIfRequired("/") + " nav__left"} to="/">Home</Link>
       <div className="nav__right">
           <Link className={disableIfRequired("/about")} to="/about">About me</Link>
           <Link className={disableIfRequired("/work")} to="/work">My work</Link>
           <Link className={disableIfRequired("/contact")} to="/contact">Contact</Link>
+          <a href={resume}>Resume</a>
       </div>
     </div>
   );
