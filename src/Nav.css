@@ -5,9 +5,10 @@
 .nav {
     padding-top: 4em;
     font-size: 1.5em;
-    font-family: 'Anton Regular';
+    font-family: 'Roboto' sans-serif;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
 }
 
 .nav a {
@@ -32,7 +33,8 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 0.2em;
+    height: 0.125em;
+    top: 1.25em;
     bottom: 0;
     left: 0;
     visibility: hidden;
@@ -41,7 +43,7 @@
   }
 
 .page--white .nav a::before {
-    background-color: hsl(31, 100%, 47%);
+    background-color: black;
 }
 
 .page--black .nav a::before {
@@ -72,8 +74,13 @@
 
     .nav a {
         display: inline-block;
-        margin-right: 70vw;
+        margin: 0 50vw 0 0;
+        /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line.*/
         margin-left: 0;
     }
 
+    .page--white .nav a::before,
+.page--black .nav a::before {
+    top: 1.1em;
+}
   }
