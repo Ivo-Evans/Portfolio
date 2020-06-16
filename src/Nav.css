@@ -61,7 +61,7 @@
 
 
 /* This number will have to change as you add more nav links */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
 
     .nav {
         padding-top: 1em;
