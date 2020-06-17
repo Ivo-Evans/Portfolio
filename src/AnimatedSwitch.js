@@ -4,79 +4,75 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import About from "./pages/about";
 import Home from "./pages/home";
-import Work from "./pages/work"
+import Work from "./pages/work";
 
 const routesTemplate = [
-    {
-        path: "/about",
-        component: 'About',
-    },
-    {
-        path: "/work",
-        component: "Work",
-    },
-    {
-        path: "/",
-        component: 'Home',
-    },
-]
+  {
+    path: "/about",
+    component: "About",
+  },
+  {
+    path: "/work",
+    component: "Work",
+  },
+  {
+    path: "/",
+    component: "Home",
+  },
+];
 
-const routesLibrary = {About, Home, Work}
-
+const routesLibrary = { About, Home, Work };
 
 const makeNewPage = (route) => {
-    return React.createElement(
-        routesLibrary[route.component],
-        {'classInjection': route.class + " page"}
-    )
-}
-
+  return React.createElement(routesLibrary[route.component], {
+    classInjection: `${route.class} page`,
+  });
+};
 
 export default function AnimatedSwitch() {
-    let location = useLocation();
-    const [routes, setRoutes] = React.useState(routesTemplate)
-    const [currentPage, setCurrentPage] = React.useState('page--white')
-    const [notCurrentPage, setNotCurrentPage] = React.useState('page--black')
-    const [newStyles, setNewStyles] = React.useState(0)
+  const location = useLocation();
+  const [routes, setRoutes] = React.useState(routesTemplate);
+  const [currentPage, setCurrentPage] = React.useState("page--white");
+  const [notCurrentPage, setNotCurrentPage] = React.useState("page--black");
+  const [newStyles, setNewStyles] = React.useState(0);
 
-    // this useEffect sets up logic for the next transition after a transition finishes, and when the website first renders
-    React.useEffect(() => {
-        // step 1: switch the page that has the currentPage class
-        const newRoutes = routes.map(route => {
-            const newRoute = {...route}
-            if (route.path === location.pathname) {
-                newRoute.class = currentPage
-            } else {
-                newRoute.class = notCurrentPage
-            }
-            return newRoute
-           
-        })
-        setRoutes(newRoutes)
+  // this useEffect sets up logic for the next transition after a transition finishes, and when the website first renders
+  React.useEffect(() => {
+    // step 1: switch the page that has the currentPage class
+    const newRoutes = routes.map((route) => {
+      const newRoute = { ...route };
+      if (route.path === location.pathname) {
+        newRoute.class = currentPage;
+      } else {
+        newRoute.class = notCurrentPage;
+      }
+      return newRoute;
+    });
+    setRoutes(newRoutes);
 
-        
-        // step 2: switch the values of currentPage and notCurrentPage
-        // if you wanted more than two switching classes, you would do so by factoring out step 2 into its own function with custom logic
-        const intermediary = notCurrentPage
-        setNotCurrentPage(currentPage)
-        setCurrentPage(intermediary)
-    }, [newStyles])
+    // step 2: switch the values of currentPage and notCurrentPage
+    // if you wanted more than two switching classes, you would do so by factoring out step 2 into its own function with custom logic
+    const intermediary = notCurrentPage;
+    setNotCurrentPage(currentPage);
+    setCurrentPage(intermediary);
+  }, [newStyles]);
 
-    const nextStyle = () => setNewStyles(newStyles + 1)
+  const nextStyle = () => setNewStyles(newStyles + 1);
 
-    return (
-        <TransitionGroup>
-          <CSSTransition key={location.key} classNames="slide" timeout={1000} onExit={nextStyle}>
-            <Switch location={location}>
-            {routes.map(route => {
-                return (
-                    <Route path={route.path}>
-                     {makeNewPage(route)}
-                    </Route>
-                )
-            })}
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-      )
-};
+  return (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        classNames="slide"
+        timeout={1000}
+        onExit={nextStyle}
+      >
+        <Switch location={location}>
+          {routes.map((route) => {
+            return <Route path={route.path}>{makeNewPage(route)}</Route>;
+          })}
+        </Switch>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+}
