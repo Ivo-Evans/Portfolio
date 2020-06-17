@@ -6,58 +6,63 @@ import About from "./pages/about";
 import Home from "./pages/home";
 import Work from "./pages/work";
 
-const routesTemplate = [
-  {
-    path: "/about",
-    component: "About",
-  },
-  {
-    path: "/work",
-    component: "Work",
-  },
-  {
-    path: "/",
-    component: "Home",
-  },
-];
-
-const routesLibrary = { About, Home, Work };
-
-const makeNewPage = (route) => {
-  return React.createElement(routesLibrary[route.component], {
-    classInjection: `${route.class} page`,
-  });
+const initialState = {
+  routes: [
+    {
+      path: "/about",
+      component: "About",
+    },
+    {
+      path: "/work",
+      component: "Work",
+    },
+    {
+      path: "/",
+      component: "Home",
+    },
+  ],
+  routesLibrary: { About, Home, Work },
+  currentPage: "page--white",
+  notCurrentPage: "page--black",
 };
 
 export default function AnimatedSwitch() {
   const location = useLocation();
-  const [routes, setRoutes] = React.useState(routesTemplate);
-  const [currentPage, setCurrentPage] = React.useState("page--white");
-  const [notCurrentPage, setNotCurrentPage] = React.useState("page--black");
-  const [newStyles, setNewStyles] = React.useState(0);
 
-  // this useEffect sets up logic for the next transition after a transition finishes, and when the website first renders
-  React.useEffect(() => {
-    // step 1: switch the page that has the currentPage class
-    const newRoutes = routes.map((route) => {
+  function updateState(state) {
+    const currentLocation = location.pathname;
+    const newState = { ...state }; // deep enough?
+
+    // step 1: change which page has currentPage binding
+    const newRoutes = state.routes.map((route) => {
       const newRoute = { ...route };
-      if (route.path === location.pathname) {
-        newRoute.class = currentPage;
+      if (route.path === currentLocation) {
+        newRoute.class = state.currentPage;
       } else {
-        newRoute.class = notCurrentPage;
+        newRoute.class = state.notCurrentPage;
       }
       return newRoute;
     });
-    setRoutes(newRoutes);
+    newState.routes = newRoutes;
 
-    // step 2: switch the values of currentPage and notCurrentPage
-    // if you wanted more than two switching classes, you would do so by factoring out step 2 into its own function with custom logic
-    const intermediary = notCurrentPage;
-    setNotCurrentPage(currentPage);
-    setCurrentPage(intermediary);
-  }, [newStyles]);
+    // step 2: change value referenced by currentPage binding
+    const intermediary = state.notCurrentPage;
+    newState.notCurrentPage = state.currentPage;
+    newState.currentPage = intermediary;
+    return newState;
+  }
 
-  const nextStyle = () => setNewStyles(newStyles + 1);
+  const [state, dispatch] = React.useReducer(updateState, initialState);
+
+  React.useEffect(() => {
+    dispatch();
+  }, []);
+
+  const makeNewPage = (route) => {
+    return React.createElement(state.routesLibrary[route.component], {
+      classInjection: `${route.class} page`,
+    });
+  };
 
   return (
     <TransitionGroup>
@@ -65,10 +70,10 @@ export default function AnimatedSwitch() {
         key={location.key}
         classNames="slide"
         timeout={1000}
-        onExit={nextStyle}
+        onExit={dispatch}
       >
         <Switch location={location}>
-          {routes.map((route) => {
+          {state.routes.map((route) => {
             return <Route path={route.path}>{makeNewPage(route)}</Route>;
           })}
         </Switch>
