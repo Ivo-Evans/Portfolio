@@ -13,10 +13,18 @@
 
 .strapline {
     grid-area: a;
-    font-family: Roboto, sans-serif;
-    font-size: 8vw;
     padding: 0;
     margin: 0;
+}
+
+.page--white .strapline {
+    font-family: Merriweather, serif;
+    font-size: 7.25vw;
+}
+
+.page--black .strapline {
+    font-family: Roboto, sans-serif;
+    font-size: 8vw;
 }
 
 .stack {
