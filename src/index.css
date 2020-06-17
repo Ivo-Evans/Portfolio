@@ -13,8 +13,8 @@ code {
 }
 
 @font-face {
-    font-family: 'Anton Regular';
-    src: local('Anton Regular'), url(./fonts/Anton-Regular.ttf) format('truetype');
+    font-family: 'Merriweather';
+    src: local('Merriweather Regular'), url(./fonts/merriweather/Merriweather-Regular.ttf) format('truetype');
 }
 
 @font-face {
