@@ -7,11 +7,10 @@
     /* maybe it looks better without transform translate y */
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "a a a a b";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a a a b";
 }
 
- 
 .strapline {
     grid-area: a;
     font-family: Roboto, sans-serif;
@@ -22,11 +21,20 @@
 
 .stack {
     grid-area: b;
-    border-left: 5px solid black;
+    border-left: 5px solid;
     font-size: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 2vw;
+}
+
+.page--white .stack {
+    border-color: black;
+}
+
+.page--black .stack {
+    border-color: white;
 }
 
 .stack p {
