@@ -7,21 +7,11 @@ import Home from "./pages/home";
 import Work from "./pages/work";
 
 const initialState = {
-  routes: [
-    {
-      path: "/about",
-      component: "About",
-    },
-    {
-      path: "/work",
-      component: "Work",
-    },
-    {
-      path: "/",
-      component: "Home",
-    },
-  ],
-  routesLibrary: { About, Home, Work },
+  routes: {
+    "/": "",
+    "/work": "",
+    "/about": "",
+  },
   currentPage: "page--white",
   notCurrentPage: "page--black",
 };
@@ -30,22 +20,17 @@ export default function AnimatedSwitch() {
   const location = useLocation();
 
   function updateState(state) {
-    const currentLocation = location.pathname;
-    const newState = { ...state }; // deep enough?
-
-    // step 1: change which page has currentPage binding
-    const newRoutes = state.routes.map((route) => {
-      const newRoute = { ...route };
-      if (route.path === currentLocation) {
-        newRoute.class = state.currentPage;
+    const newState = { ...state };
+    const newRoutes = { ...newState.routes };
+    Object.keys(newRoutes).forEach((route) => {
+      if (route === location.pathname) {
+        newRoutes[route] = newState.currentPage;
       } else {
-        newRoute.class = state.notCurrentPage;
+        newRoutes[route] = newState.notCurrentPage;
       }
-      return newRoute;
     });
     newState.routes = newRoutes;
 
-    // step 2: change value referenced by currentPage binding
     const intermediary = state.notCurrentPage;
     newState.notCurrentPage = state.currentPage;
     newState.currentPage = intermediary;
@@ -58,12 +43,6 @@ export default function AnimatedSwitch() {
     dispatch();
   }, []);
 
-  const makeNewPage = (route) => {
-    return React.createElement(state.routesLibrary[route.component], {
-      classInjection: `${route.class} page`,
-    });
-  };
-
   return (
     <TransitionGroup>
       <CSSTransition
@@ -73,9 +52,15 @@ export default function AnimatedSwitch() {
         onExit={dispatch}
       >
         <Switch location={location}>
-          {state.routes.map((route) => {
-            return <Route path={route.path}>{makeNewPage(route)}</Route>;
-          })}
+          <Route exact path="/about">
+            <About classInjection={`page ${state.routes["/about"]}`} />
+          </Route>
+          <Route exact path="/work">
+            <Work classInjection={`page ${state.routes["/work"]}`} />
+          </Route>
+          <Route path="/">
+            <Home classInjection={`page ${state.routes["/"]}`} />
+          </Route>
         </Switch>
       </CSSTransition>
     </TransitionGroup>
