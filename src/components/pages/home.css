@@ -1,0 +1,56 @@
+.central-banner {
+  position: absolute;
+  /* bubbles up to body */
+  top: 60vh;
+  /* Maybe nav could be defined in vh's too. Maybe I couldd do some subtraction with Sasss .... */
+  transform: translateY(-50%);
+  /* maybe it looks better without transform translate y */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a a a b";
+}
+
+.strapline {
+  grid-area: a;
+  padding: 0;
+  margin: 0;
+}
+
+.page--white .strapline {
+  font-family: Merriweather, serif;
+  font-size: 7.25vw;
+}
+
+.page--black .strapline {
+  font-family: Roboto, sans-serif;
+  font-size: 8vw;
+}
+
+.stack {
+  grid-area: b;
+  border-left: 5px solid;
+  font-size: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2vw;
+}
+
+.page--white .stack {
+  border-color: black;
+}
+
+.page--black .stack {
+  border-color: white;
+}
+
+.stack p {
+  padding: 1vh 0 1vh 5vh;
+  margin: 0;
+}
+
+/* .stack {
+    max-width: 20%;
+    display: inline;
+} */

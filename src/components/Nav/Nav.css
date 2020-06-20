@@ -1,0 +1,83 @@
+.link--disabled {
+  pointer-events: none;
+}
+
+.nav {
+  padding-top: 4em;
+  font-size: 1.5em;
+  font-family: "Roboto" sans-serif;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__right a {
+  margin: 0 2em;
+}
+
+.page--white .nav a {
+  color: black;
+}
+
+.page--black .nav a {
+  color: white;
+}
+
+.page--white .nav a::before,
+.page--black .nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125em;
+  top: 1.25em;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.page--white .nav a::before {
+  background-color: black;
+}
+
+.page--black .nav a::before {
+  background-color: yellow;
+}
+
+.page--white .nav a:hover::before,
+.page--white .nav a.link--disabled::before,
+.page--black .nav a:hover::before,
+.page--black .nav a.link--disabled::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* This number will have to change as you add more nav links */
+@media screen and (max-width: 900px) {
+  .nav {
+    padding-top: 1em;
+    display: initial;
+  }
+
+  .nav__left {
+    display: block;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin: 0 50vw 0 0;
+    /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line.*/
+    margin-left: 0;
+  }
+
+  .page--white .nav a::before,
+  .page--black .nav a::before {
+    top: 1.1em;
+  }
+}
