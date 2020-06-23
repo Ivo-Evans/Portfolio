@@ -52,14 +52,14 @@ export default function AnimatedSwitch() {
         onExit={dispatch}
       >
         <Switch location={location}>
+          <Route exact path="/">
+            <Home classInjection={`page ${state.routes["/"]}`} />
+          </Route>
           <Route exact path="/about">
             <About classInjection={`page ${state.routes["/about"]}`} />
           </Route>
           <Route exact path="/work">
             <Work classInjection={`page ${state.routes["/work"]}`} />
-          </Route>
-          <Route path="/">
-            <Home classInjection={`page ${state.routes["/"]}`} />
           </Route>
         </Switch>
       </CSSTransition>
