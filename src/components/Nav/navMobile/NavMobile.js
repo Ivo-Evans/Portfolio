@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "./icons";
 import "./burger.css";
+import NavLinks from "../NavLinks";
 
 export default function NavMobile() {
   const [open, setOpen] = React.useState(false);
@@ -20,7 +21,7 @@ export default function NavMobile() {
       >
         <Icons open={open} />
       </div>
-      {/* {open ? NavLinks : null} */}
+      {open && NavLinks}
     </div>
   );
 }
