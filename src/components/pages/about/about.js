@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Nav from "../Nav/Nav";
-import "./page.css";
+import Nav from "../../Nav/Nav";
+import "../page.css";
 
-export default function Work({ classInjection }) {
+export default function About({ classInjection }) {
   return (
     <div className={classInjection}>
       <Nav />
-      <h1>Work</h1>
+      <h1>About</h1>
     </div>
   );
 }
 
-Work.propTypes = {
+About.propTypes = {
   classInjection: PropTypes.string.isRequired,
 };

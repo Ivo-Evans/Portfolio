@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import resume from "../pages/resume.pdf";
 
 export default [
   <NavLink activeClassName="link--disabled" exact to="/">
@@ -12,9 +11,9 @@ export default [
   <NavLink activeClassName="link--disabled" to="/work">
     My work
   </NavLink>,
-  <a target="_blank" rel="noopener noreferrer" href={resume}>
-    Resume
-  </a>,
+  <NavLink activeClassName="link--disabled" to="/contact">
+    Contact
+  </NavLink>,
   <a
     target="_blank"
     rel="noopener noreferrer"
