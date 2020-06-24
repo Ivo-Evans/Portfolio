@@ -4,22 +4,24 @@ TOP LEVEL DOC COMMENT
 The purpose of this component is to animate transitions between pages.
 During the transition two pages are visible on the screen, but the 
 oncoming page must have opposite styling to the exiting page. For this
-reason a global switch for styling is insufficient, and you need a more 
-involved approach. I used useReducer to mediate class possession for pages.
+reason you need a more involved approach than a global switch for styles. 
+I used useReducer to mediate class possession for pages.
 */
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import About from "./pages/about";
-import Home from "./pages/home";
-import Work from "./pages/work";
+import About from "./pages/about/about";
+import Home from "./pages/home/home";
+import Work from "./pages/work/work";
+import Contact from "./pages/contact/contact";
 
 const initialState = {
   routes: {
     "/": "",
     "/work": "",
     "/about": "",
+    "/contact": "",
   },
   currentPage: "page--white",
   notCurrentPage: "page--black",
@@ -72,6 +74,9 @@ export default function AnimatedSwitch() {
           </Route>
           <Route exact path="/work">
             <Work classInjection={`page ${state.routes["/work"]}`} />
+          </Route>
+          <Route exact path="/contact">
+            <Contact classInjection={`page ${state.routes["/contact"]}`} />
           </Route>
         </Switch>
       </CSSTransition>
