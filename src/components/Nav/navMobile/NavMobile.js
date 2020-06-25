@@ -1,7 +1,7 @@
 import React from "react";
 import Icons from "./icons";
-import "./burger.css";
 import "./icons.css";
+import "./NavMobile.css";
 import NavLinks from "../NavLinks";
 
 export default function NavMobile() {
