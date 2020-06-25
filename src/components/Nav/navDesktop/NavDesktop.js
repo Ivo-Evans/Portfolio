@@ -1,5 +1,6 @@
 import React from "react";
-import NavLinks from "./NavLinks";
+import NavLinks from "../NavLinks";
+import "./NavDesktop.css";
 
 export default function NavDesktop() {
   return (

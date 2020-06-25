@@ -1,6 +1,7 @@
 import React from "react";
 import Icons from "./icons";
-import "./burger.css";
+import "./icons.css";
+import "./NavMobile.css";
 import NavLinks from "../NavLinks";
 
 export default function NavMobile() {
@@ -14,6 +15,7 @@ export default function NavMobile() {
   return (
     <div className="nav nav--mobile">
       <div
+        className="icon"
         onKeyPress={toggleOpen}
         onClick={toggleOpen}
         role="button"

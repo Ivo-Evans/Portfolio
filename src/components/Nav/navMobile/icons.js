@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+import "../../../animations.css";
+import "./icons.css";
 
 export default function Icons({ open }) {
   return (
