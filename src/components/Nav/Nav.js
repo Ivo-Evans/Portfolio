@@ -1,6 +1,6 @@
 import React from "react";
 import "./Nav.css";
-import useWindowDimensions from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./navMobile/NavMobile";
 

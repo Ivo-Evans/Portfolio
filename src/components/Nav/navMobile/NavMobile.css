@@ -9,3 +9,7 @@
   /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line.*/
   margin-left: 0;
 }
+
+.nav--mobile .icon {
+  background-color: red;
+}
