@@ -70,10 +70,14 @@ export default function AnimatedSwitch() {
             <Home classInjection={`page ${state.routes["/"]}`} />
           </Route>
           <Route exact path="/about">
-            <About classInjection={`page ${state.routes["/about"]}`} />
+            <About
+              classInjection={`page page--content ${state.routes["/about"]}`}
+            />
           </Route>
           <Route exact path="/work">
-            <Work classInjection={`page ${state.routes["/work"]}`} />
+            <Work
+              classInjection={`page page--content ${state.routes["/work"]}`}
+            />
           </Route>
           <Route exact path="/contact">
             <Contact classInjection={`page ${state.routes["/contact"]}`} />

@@ -13,3 +13,10 @@
   background-color: black;
   color: white;
 }
+
+/* all of the immediate children of pages with content except Nav elements */
+.page--content > *:not(.nav) {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
