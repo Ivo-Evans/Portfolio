@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Nav from "../../Nav/Nav";
 import Bio from "./bio";
+import Technologies from "./technologies";
 
 import "../page.css";
 
@@ -10,7 +11,7 @@ export default function About({ classInjection }) {
     <div className={classInjection}>
       <Nav />
       <Bio />
-      <h1>Technologies I like ↓</h1>
+      <Technologies />
     </div>
   );
 }

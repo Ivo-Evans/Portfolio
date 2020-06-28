@@ -1,0 +1,21 @@
+.about__icon {
+  font-size: 3em;
+  padding: 0 0.5em;
+  filter: grayscale(100%);
+  transition: 0.15s filter linear, 1s -webkit-filter linear;
+}
+
+.about__icon:hover {
+  filter: none;
+}
+
+.about__section {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.about__section h2 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
