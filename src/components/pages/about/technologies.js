@@ -11,7 +11,7 @@ import pythonIcon from "@iconify/icons-logos/python";
 import expressIcon from "@iconify/icons-logos/express";
 import flaskIcon from "@iconify/icons-cib/flask";
 import postgresqlIcon from "@iconify/icons-logos/postgresql";
-import mongodbIcon from "@iconify/icons-logos/mongodb";
+import mongodbIcon from "@iconify/icons-cib/mongodb";
 import reactIcon from "@iconify/icons-logos/react";
 import materialUi from "@iconify/icons-logos/material-ui";
 import styledComponents from "@iconify/icons-simple-icons/styled-components";
@@ -45,188 +45,190 @@ export default function Technologies() {
   return (
     <div>
       <h1>TECHNOLOGIES</h1>
-      <section className="about__section">
-        <h2>Languages</h2>
+      <div className="about__technologies">
+        {/* <section className="about__section">
+        <h2>Languages</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={html5}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={css3}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={javascriptIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={rubyIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={pythonIcon}
         />
-      </section>
+        {/* </section>
       <section className="about__section">
-        <h2>Backend</h2>
+        <h2>Backend</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={postgresqlIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={mongodbIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={nodejsIcon}
         />
         <Icon
-          className="about__icon"
-          width="1em"
+          className="about__icon about__express-icon"
+          height="2em"
           align="center, middle, meet"
           icon={expressIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={flaskIcon}
         />
-      </section>
-      <section className="about__section">
-        <h2>Frontend</h2>
+        {/* </section>
+      <section className="about__section"> 
+        <h2>Frontend</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={reactIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={materialUi}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={styledComponents}
         />
-      </section>
+        {/* </section>
 
       <section className="about__section">
-        <h2>Tools</h2>
+        <h2>Tools</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={jestIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={postmanIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={codecovIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={travisCi}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={prettierIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={eslintIcon}
         />
-      </section>
+        {/* </section>
 
       <section className="about__section">
-        <h2>Deployment</h2>
+        <h2>Deployment</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={netlifyIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={herokuIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={googleCloudPlatform}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={dockerIcon}
         />
-      </section>
+        {/* </section>
       <section className="about__section">
-        <h2>Project management</h2>
+        <h2>Project management</h2> */}
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={gitIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={githubOctocat}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={figmaIcon}
         />
         <Icon
           className="about__icon"
-          width="1em"
+          height="3em"
           align="center, middle, meet"
           icon={jiraIcon}
         />
-      </section>
+        {/* </section> */}
+      </div>
     </div>
   );
 }

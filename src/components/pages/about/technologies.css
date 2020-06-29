@@ -1,7 +1,13 @@
+.about__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .about__icon {
-  font-size: 3em;
-  padding: 0 0.5em;
-  filter: grayscale(100%);
+  /* font-size: 3em; */
+  padding: 1em;
+  /* filter: grayscale(100%); */
   transition: 0.15s filter linear, 1s -webkit-filter linear;
 }
 
@@ -18,4 +24,8 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+}
+
+.page--black .about__express-icon {
+  filter: invert(100%);
 }
