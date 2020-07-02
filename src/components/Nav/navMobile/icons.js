@@ -7,7 +7,7 @@ import "./icons.css";
 export default function Icons({ open }) {
   return (
     <SwitchTransition mode="in-out">
-      <CSSTransition key={open} classNames="fade" timeout={300}>
+      <CSSTransition key={open} classNames="fade" timeout={200}>
         {open ? <p>X</p> : <p>☰</p>}
       </CSSTransition>
     </SwitchTransition>

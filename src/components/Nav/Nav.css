@@ -2,6 +2,7 @@
   pointer-events: none;
 }
 
+/* .nav class also mentioned in page.css */
 .nav {
   font-size: 1.5em;
   font-family: "Roboto" sans-serif;

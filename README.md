@@ -1,5 +1,29 @@
+# Ivo Evans's Portfolio
 
+This is my portfolio site. It's built in react with native CSS. While writing it I developed a set of implicit rules for my CSS, which it might now be helpful to make explicit. If you're developing this after a while, be sure to read them. They might also be interesting if you are an employer looking to hire me.
 
+## CSS conventions
+
+1. Use the BEM naming convention.
+2. Use vanilla CSS.
+3. Any styling which is for a specific component should be in a CSS file of the same name as the component's file, in the same folder as the component.
+4. React Transition Group CSS should go in animations.css. Other CSS animations can go in their component folders.
+5. Use combinators and inheritance to keep CSS DRY and achieve maximum style changes with minimal markup and code changes.
+6. Do not use inheritance if it makes no practical difference.
+7. Lift variables up by defining them in index.css
+8. Define breakpoints in the minimum number of places (i.e. index.css)
+9. If you need to use a piece of CSS namespace in more than one place, put a comment in both places referencing the other place you use it. Two notable exceptions to this rule are .page--white and .page--black, which appear throughout the CSS and are fundamental to the design.
+
+## Workflow conventions
+
+As well as CSS conventions there are some workflow conventions:
+
+1. work in branches based off issues
+2. Begin branch names with issue numbers followed by underscores
+3. Use the conventional commit commit syntax (commitizen is installed to help with this)
+4. Relate every change to its github issue
+
+## Generated readme below
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
