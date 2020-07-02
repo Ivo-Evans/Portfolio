@@ -1,0 +1,29 @@
+.about__icon {
+  padding: 1em 1.25em 0 1em;
+}
+
+.page--black .about__express-icon {
+  filter: invert(100%);
+}
+
+.about__icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.icon__description {
+  margin-top: 0.25em;
+  text-align: center;
+  font-size: 0.75em;
+  max-width: 10em;
+  filter: opacity(0);
+  transition: 0.1s filter linear, 0.1s -webkit-filter linear;
+}
+
+.about__icon-box:hover .icon__description,
+.about__icon-box:focus .icon__description {
+  filter: opacity(1);
+}

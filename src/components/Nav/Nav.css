@@ -45,8 +45,10 @@
 }
 
 .page--white .nav a:hover::before,
+.page--white .nav a:focus::before,
 .page--white .nav a.link--disabled::before,
 .page--black .nav a:hover::before,
+.page--black .nav a:focus::before,
 .page--black .nav a.link--disabled::before {
   visibility: visible;
   transform: scaleX(1);
