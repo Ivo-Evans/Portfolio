@@ -8,6 +8,7 @@ body {
   --contact__name-size: 3vw;
   --contact__number-size: 5vw;
   --contact__email-size: 2vw;
+  --standard-text-size: 1.175em;
 }
 
 code {

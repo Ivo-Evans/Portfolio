@@ -37,7 +37,7 @@
 }
 
 .page--white .nav a::before {
-  background-color: black;
+  background-color: #b30f00;
 }
 
 .page--black .nav a::before {

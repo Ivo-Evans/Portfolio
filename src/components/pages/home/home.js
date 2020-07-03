@@ -9,13 +9,17 @@ export default function Home({ classInjection }) {
     <div className={classInjection}>
       <Nav />
       <div className="central-banner">
-        <h1 className="strapline">I make experiences for the modern web</h1>
-        <div className="stack">
+        <h1 className="strapline">
+          My name is <span className="strapline__name">Ivo Evans.
+          </span> <br />{" "}
+          I make experiences for the modern web.
+        </h1>
+        {/* <div className="stack">
           <p>React</p>
           <p>Node</p>
           <p>Express</p>
           <p>PostgreSQL</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
