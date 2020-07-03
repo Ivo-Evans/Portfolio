@@ -1,0 +1,11 @@
+.bio p {
+  font-size: var(--standard-text-size);
+}
+
+.page--white .bio a {
+  color: black;
+}
+
+.page--black .bio a {
+  color: white;
+}

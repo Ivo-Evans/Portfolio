@@ -1,10 +1,11 @@
 import React from "react";
 import resume from "../../../resume.pdf";
+import "./bio.css";
 
 export default function Bio() {
   return (
     <div className="bio">
-      <h1>HI, MY NAME IS IVO.</h1>
+      <h1>HI,</h1>
       <p>
         I&apos;m a full-stack engineer looking for opportunities in London. I am
         a graduate of and mentor at the bootcamp Founders and Coders, and am
