@@ -2,6 +2,13 @@
   font-size: var(--standard-text-size);
 }
 
+.bio img {
+    max-width: 33%;
+    float: left;
+    display: inline-block;
+    padding-right: 1em;
+}
+
 .page--white .bio a {
   color: black;
 }

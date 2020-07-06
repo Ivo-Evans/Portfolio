@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
-import "./fonts/Anton-Regular.ttf";
 
 ReactDOM.render(
   <React.StrictMode>

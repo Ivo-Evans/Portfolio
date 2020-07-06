@@ -10,7 +10,7 @@
 		"prefer-promise-reject-errors": "off",
 		"max-len": [
 			"error",
-			{ "code": 80, "ignoreComments": true, "ignoreUrls": true }
+			{ "code": 80, "ignoreComments": true, "ignoreUrls": true, "ignoreStrings": true }
 		],
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/jsx-one-expression-per-line": [0],
