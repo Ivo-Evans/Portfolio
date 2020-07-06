@@ -9,14 +9,10 @@
 
 .nav--mobile {
   padding-top: 1em;
-  display: initial;
 }
 
 .nav--mobile a {
   display: inline-block;
   margin: 0 50vw 0 0;
-
-  /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line.*/
-
-  margin-left: 0;
+  /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line, because the animated underline is a pseudo-element and its width is the width of the anchor */
 }

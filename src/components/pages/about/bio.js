@@ -1,11 +1,13 @@
 import React from "react";
-import resume from "../../../resume.pdf";
+import resume from "../../../assets/resume.pdf";
 import "./bio.css";
+import self from "../../../assets/images/self2.jpg"
 
 export default function Bio() {
   return (
     <div className="bio">
-      <h1>HI,</h1>
+      <img src={self} alt="me"/>
+      <h1>Hi,</h1>
       <p>
         I&apos;m a full-stack engineer looking for opportunities in London. I am
         a graduate of and mentor at the bootcamp Founders and Coders, and am
