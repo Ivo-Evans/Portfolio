@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Nav from "../../Nav/Nav";
 import Bio from "./bio";
 import Technologies from "./technologies";
@@ -16,7 +15,3 @@ export default function About({ classInjection }: ClassInjectionType) {
     </div>
   );
 }
-
-About.propTypes = {
-  classInjection: PropTypes.string.isRequired,
-};

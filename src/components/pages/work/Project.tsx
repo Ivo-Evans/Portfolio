@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Project.css";
 
 type ProjectProps = {
@@ -63,15 +62,6 @@ const Project = ({
       </div>
     </article>
   );
-};
-
-Project.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.string).isRequired,
-  deployLink: PropTypes.string,
-  codeLink: PropTypes.string.isRequired,
 };
 
 Project.defaultProps = {

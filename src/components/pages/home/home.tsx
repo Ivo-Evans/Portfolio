@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Nav from "../../Nav/Nav";
 import "../page.css";
 import "./home.css";
@@ -26,6 +25,3 @@ export default function Home({ classInjection }: ClassInjectionType) {
   );
 }
 
-Home.propTypes = {
-  classInjection: PropTypes.string.isRequired,
-};

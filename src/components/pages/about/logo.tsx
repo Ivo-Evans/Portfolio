@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
 import { IconifyIcon } from "@iconify/types"
 import "./logo.css";
@@ -25,16 +24,9 @@ const Logo = ({ icon, description, height, extraClasses }: LogoType) => {
   );
 };
 
-Logo.propTypes = {
-  icon: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  height: PropTypes.string,
-  extraClasses: PropTypes.string,
-};
-
 Logo.defaultProps = {
-  height: null,
-  extraClasses: null,
+  height: "",
+  extraClasses: "",
 };
 
 export default Logo;

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "../page.css";
 
 import Nav from "../../Nav/Nav";
@@ -40,7 +39,3 @@ export default function Work({ classInjection }: ClassInjectionType) {
     </div>
   );
 }
-
-Work.propTypes = {
-  classInjection: PropTypes.string.isRequired,
-};
