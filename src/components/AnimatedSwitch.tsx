@@ -23,15 +23,15 @@ const initialState = {
     "/about": "",
     "/contact": "",
   },
-  currentPage: "page--white",
-  notCurrentPage: "page--black",
+  currentPage: "page--black",
+  notCurrentPage: "page--white",
 };
 
 export default function AnimatedSwitch() {
   const location = useLocation();
 
   // this function runs after animations finish to set up correct classes for the next animation
-  function updateState(state) {
+  function updateState(state: any) {
     // step 1: switch which page is currenPage
     const newState = { ...state };
     const newRoutes = { ...newState.routes };

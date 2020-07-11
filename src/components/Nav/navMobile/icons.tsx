@@ -4,10 +4,12 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "../../../animations.css";
 import "./icons.css";
 
-export default function Icons({ open }) {
+type IconProps = { open: boolean};
+
+export default function Icons({ open }: IconProps) {
   return (
     <SwitchTransition mode="in-out">
-      <CSSTransition key={open} classNames="fade" timeout={200}>
+      <CSSTransition key={String(open)} classNames="fade" timeout={200}>
         {open ? <p>X</p> : <p>☰</p>}
       </CSSTransition>
     </SwitchTransition>

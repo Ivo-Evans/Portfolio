@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import Nav from "../../Nav/Nav";
 import "../page.css";
 import "./home.css";
+import { ClassInjectionType } from "../../classInjectionType"
 
-export default function Home({ classInjection }) {
+export default function Home({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
       <Nav />

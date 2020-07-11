@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Nav from "../../Nav/Nav";
 import "./contact.css";
+import { ClassInjectionType } from "../../classInjectionType"
 
-export default function Contact({ classInjection }) {
+export default function Contact({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
       <Nav />

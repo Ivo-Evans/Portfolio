@@ -1,7 +1,8 @@
 import React from "react";
-import resume from "../../../assets/resume.pdf";
 import "./bio.css";
-import self from "../../../assets/images/self2.jpg"
+
+const resume = require("../../../assets/resume.pdf")
+const self = require("../../../assets/images/self2.jpg")
 
 export default function Bio() {
   return (
