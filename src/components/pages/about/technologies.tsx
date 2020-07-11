@@ -32,40 +32,39 @@ import Logo from "./logo";
 import "./technologies.css";
 
 export default function Technologies() {
-  return (
-    <div className="about__technologies">
-      <Logo icon={html5} description="HTML" />
-      <Logo icon={css3} description="CSS" />
-      <Logo icon={javascriptIcon} description="JavaScript" />
-      <Logo icon={rubyIcon} description="Ruby" />
-      <Logo icon={pythonIcon} description="Python" />
-      <Logo icon={postgresqlIcon} description="PostgreSQL" />
-      <Logo icon={mongodbIcon} description="MongoDB" />
-      <Logo icon={nodejsIcon} description="Node.JS" />
-      <Logo
-        extraClasses="about__express-icon"
-        height="2em"
-        icon={expressIcon}
-        description="Express"
-      />
-      <Logo icon={flaskIcon} description="Flask" />
-      <Logo icon={reactIcon} description="React" />
-      <Logo icon={materialUi} description="Material UI" />
-      <Logo icon={styledComponents} description="Styled Components" />
-      <Logo icon={jestIcon} description="Jest" />
-      <Logo icon={postmanIcon} description="Postman" />
-      <Logo icon={codecovIcon} description="CodeCov" />
-      <Logo icon={travisCi} description="Travis CI" />
-      <Logo icon={prettierIcon} description="Prettier" />
-      <Logo icon={eslintIcon} description="ESLint" />
-      <Logo icon={netlifyIcon} description="Netlify" />
-      <Logo icon={herokuIcon} description="Heroku" />
-      <Logo icon={googleCloudPlatform} description="Google Cloud" />
-      <Logo icon={dockerIcon} description="Docker" />
-      <Logo icon={gitIcon} description="Git" />
-      <Logo icon={githubOctocat} description="GitHub" />
-      <Logo icon={figmaIcon} description="Figma" />
-      <Logo icon={jiraIcon} description="Jira" />
-    </div>
-  );
+  const logos = [
+    <Logo icon={html5} description="HTML" />,
+    <Logo icon={css3} description="CSS" />,
+    <Logo icon={javascriptIcon} description="JavaScript" />,
+    <Logo icon={rubyIcon} description="Ruby" />,
+    <Logo icon={pythonIcon} description="Python" />,
+    <Logo icon={postgresqlIcon} description="PostgreSQL" />,
+    <Logo icon={mongodbIcon} description="MongoDB" />,
+    <Logo icon={nodejsIcon} description="Node.JS" />,
+    <Logo
+      extraClasses="about__express-icon"
+      height="2em"
+      icon={expressIcon}
+      description="Express"
+    />,
+    <Logo icon={flaskIcon} description="Flask" />,
+    <Logo icon={reactIcon} description="React" />,
+    <Logo icon={materialUi} description="Material UI" />,
+    <Logo icon={styledComponents} description="Styled Components" />,
+    <Logo icon={jestIcon} description="Jest" />,
+    <Logo icon={postmanIcon} description="Postman" />,
+    <Logo icon={codecovIcon} description="CodeCov" />,
+    <Logo icon={travisCi} description="Travis CI" />,
+    <Logo icon={prettierIcon} description="Prettier" />,
+    <Logo icon={eslintIcon} description="ESLint" />,
+    <Logo icon={netlifyIcon} description="Netlify" />,
+    <Logo icon={herokuIcon} description="Heroku" />,
+    <Logo icon={googleCloudPlatform} description="Google Cloud" />,
+    <Logo icon={dockerIcon} description="Docker" />,
+    <Logo icon={gitIcon} description="Git" />,
+    <Logo icon={githubOctocat} description="GitHub" />,
+    <Logo icon={figmaIcon} description="Figma" />,
+    <Logo icon={jiraIcon} description="Jira" />,
+  ];
+  return <div className="about__technologies">{logos}</div>;
 }

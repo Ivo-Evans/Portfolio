@@ -1,6 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Project.css";
+
+type ProjectProps = {
+    name: string,
+    description: string,
+    picture: string,
+    tech: string[],
+    deployLink: string,
+    codeLink: string
+}
 
 const Project = ({
   name,
@@ -9,26 +17,18 @@ const Project = ({
   tech,
   deployLink,
   codeLink,
-}) => {
+}: ProjectProps) => {
   return (
     <article className="project">
-      {deployLink ? (
-        <a href={deployLink} target="_blank" rel="noopener noreferrer">
+        <a href={deployLink || codeLink} target="_blank" rel="noopener noreferrer">
           <img className="project__image" src={picture} alt={name} />
         </a>
-      ) : (
-        <img className="project__image" src={picture} alt={name} />
-      )}
 
       <div className="project__text">
         <h2>
-          {deployLink ? (
-            <a href={deployLink} target="_blank" rel="noopener noreferrer">
+        <a href={deployLink || codeLink} target="_blank" rel="noopener noreferrer">
               {name}
             </a>
-          ) : (
-            <>{name}</>
-          )}
         </h2>
         <div className="project__description">
           <p>{description}</p>
@@ -62,15 +62,6 @@ const Project = ({
       </div>
     </article>
   );
-};
-
-Project.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  tech: PropTypes.arrayOf(PropTypes.string).isRequired,
-  deployLink: PropTypes.string,
-  codeLink: PropTypes.string.isRequired,
 };
 
 Project.defaultProps = {

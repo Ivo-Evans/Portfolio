@@ -16,6 +16,16 @@ import Home from "./pages/home/home";
 import Work from "./pages/work/work";
 import Contact from "./pages/contact/contact";
 
+type routeClasses = {
+    [index:string]: string
+}
+
+type stateType = {
+    routes: routeClasses,
+    currentPage: string,
+    notCurrentPage: string
+}
+
 const initialState = {
   routes: {
     "/": "",
@@ -23,19 +33,20 @@ const initialState = {
     "/about": "",
     "/contact": "",
   },
-  currentPage: "page--white",
-  notCurrentPage: "page--black",
+  currentPage: "page--black",
+  notCurrentPage: "page--white",
 };
+
 
 export default function AnimatedSwitch() {
   const location = useLocation();
 
   // this function runs after animations finish to set up correct classes for the next animation
-  function updateState(state) {
+  function updateState(state: stateType) {
     // step 1: switch which page is currenPage
-    const newState = { ...state };
-    const newRoutes = { ...newState.routes };
-    Object.keys(newRoutes).forEach((route) => {
+    const newState: stateType = { ...state };
+    const newRoutes: routeClasses = { ...newState.routes };
+    Object.keys(newRoutes).forEach((route: string) => {
       if (route === location.pathname) {
         newRoutes[route] = newState.currentPage;
       } else {

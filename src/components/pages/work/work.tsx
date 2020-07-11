@@ -1,15 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "../page.css";
 
 import Nav from "../../Nav/Nav";
 import Project from "./Project";
+import { ClassInjectionType } from "../../classInjectionType"
 
 import humanibaseImage from "../../../assets/images/projects/humanibase_cropped.png";
 import apiImage from "../../../assets/images/projects/api_cropped.jpg";
 import cardleyImage from "../../../assets/images/projects/cardley_cropped.png";
 
-export default function Work({ classInjection }) {
+export default function Work({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
       <Nav />
@@ -39,7 +39,3 @@ export default function Work({ classInjection }) {
     </div>
   );
 }
-
-Work.propTypes = {
-  classInjection: PropTypes.string.isRequired,
-};

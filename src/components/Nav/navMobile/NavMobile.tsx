@@ -6,8 +6,13 @@ import NavLinks from "../NavLinks";
 
 export default function NavMobile() {
   const [open, setOpen] = React.useState(false);
-  const toggleOpen = (e) => {
-    if (e.type === "click" || e.key === " " || e.key === "Enter") {
+  const toggleOpenMouse = (e: React.MouseEvent) => {
+    if (e.type === "click") {
+      setOpen(() => !open);
+    }
+  };
+  const toggleOpenKey = (e: React.KeyboardEvent) => {
+    if (e.key === " " || e.key === "Enter") {
       setOpen(() => !open);
     }
   };
@@ -16,8 +21,8 @@ export default function NavMobile() {
     <div className="nav nav--mobile">
       <div
         className="icon"
-        onKeyPress={toggleOpen}
-        onClick={toggleOpen}
+        onKeyPress={toggleOpenKey}
+        onClick={toggleOpenMouse}
         role="button"
         tabIndex={0}
       >
