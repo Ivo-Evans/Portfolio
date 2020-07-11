@@ -10,7 +10,8 @@ export default function Home({ classInjection }: ClassInjectionType) {
       <Nav />
       <div className="central-banner">
         <h1 className="strapline">
-          My name is <span className="strapline__name">Ivo Evans.
+            Hi,<br />
+          my name is <span className="strapline__name">Ivo Evans.
           </span> <br />{" "}
           I make experiences for the modern web.
         </h1>
