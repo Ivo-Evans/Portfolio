@@ -66,5 +66,5 @@ export default function Technologies() {
     <Logo icon={figmaIcon} description="Figma" />,
     <Logo icon={jiraIcon} description="Jira" />,
   ];
-  return <div>{logos}</div>;
+  return <div className="about__technologies">{logos}</div>;
 }
