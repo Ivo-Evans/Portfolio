@@ -20,6 +20,10 @@
   font-size: 6vw;
 }
 
+.strapline__name {
+    text-decoration: none;
+}
+
 .page--white .strapline__name {
   color: #b30f00;
 }
