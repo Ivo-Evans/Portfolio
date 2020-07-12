@@ -74,7 +74,7 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
     <Nav />
-    <div className="about__technologies">{logos}</div>;
+    <div className="about__technologies">{logos}</div>
 </div>
   )
 }
