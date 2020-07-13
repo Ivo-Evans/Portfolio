@@ -9,6 +9,14 @@ body {
   --contact__number-size: 5vw;
   --contact__email-size: 2vw;
   --standard-text-size: 1.175em;
+  --page--black_bg: black;
+  --page--black_fg: white;
+  --page--black_highlight: yellow;
+  --page--white_bg: white;
+  --page--white_fg: black;
+  --page--white_highlight: #b30f00;
+
+
 }
 
 code {

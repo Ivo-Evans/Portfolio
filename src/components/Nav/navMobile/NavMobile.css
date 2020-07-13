@@ -6,11 +6,11 @@
 }
 
 .page--white .nav--mobile {
-    background-color: white;
+    background-color: var(--page--white_bg);
 }
 
 .page--black .nav--mobile {
-    background-color: black;
+    background-color: var(--page--black_bg);
 }
 
 .nav--mobile {

@@ -10,9 +10,9 @@
 }
 
 .page--white .bio a {
-  color: black;
+  color: var(--page--white_fg);
 }
 
 .page--black .bio a {
-  color: white;
+  color: var(--page--black_fg);
 }

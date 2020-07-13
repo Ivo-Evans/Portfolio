@@ -5,11 +5,11 @@
 }
 
 .page--white .project a {
-  color: black;
+  color: var(--page--white_fg);
 }
 
 .page--black .project a {
-  color: white;
+  color: var(--page--black_fg);
 }
 
 .project__image {
