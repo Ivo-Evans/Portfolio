@@ -18,26 +18,33 @@ export default function InfoBox({
     const link = links[0];
     linksElement = (
       <>
-        <em>Project:</em>
+        <em>A project: </em>
         <a href={link.link}>{link.title}</a>
       </>
     );
   } else {
     linksElement = (
       <>
-        <em>Projects:</em>
-        {links.map((link) => <a href={link.link}>{link.title}</a>).join(" ")}
+        <em>Some projects: </em>
+        {links.map((link, index) => (
+          <>
+            {!!index && " | "}
+            <a href={link.link}>{link.title}</a>
+          </>
+        ))}
       </>
     );
   }
   return (
     <>
       <h2 className="infobox__title">{name}</h2>
-      <Icon
-        className={`infobox__icon ${classModifier}`}
-        width={size || "5em"}
-        icon={icon}
-      />
+      <div className="infobox__icon-box">
+        <Icon
+          className={`infobox__icon ${classModifier}`}
+          width={size || "5em"}
+          icon={icon}
+        />
+      </div>
       <p className="infobox__comment"> {comment}</p>
       <p className="infobox__links">{linksElement}</p>
     </>
