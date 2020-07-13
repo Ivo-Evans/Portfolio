@@ -19,11 +19,11 @@ export default function Technologies({ classInjection }) {
               role="button"
               tabIndex={-1}
               onClick={() => {
-                setSelectedTech({ ...technology });
+                setSelectedTech({ enabled: true, ...technology });
               }}
               onKeyPress={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
-                  setSelectedTech({ ...technology });
+                  setSelectedTech({ enabled: true, ...technology });
                 }
               }}
             >
@@ -40,9 +40,20 @@ export default function Technologies({ classInjection }) {
           );
         })}
       </div>
-      <div className="technologies__infobox">
-        {selectedTech ? <h2>PlaceHolder</h2> : <InfoBox />}
-      </div>
+      <article className="technologies__infobox">
+        {selectedTech.enabled ? (
+          <InfoBox
+            name={selectedTech.name}
+            icon={selectedTech.icon}
+            comment={selectedTech.comment}
+            links={selectedTech.links}
+            size={selectedTech.infoBoxWidth}
+            classModifier={selectedTech.classModifier}
+          />
+        ) : (
+          <h2>PlaceHolder</h2>
+        )}
+      </article>
     </div>
   );
 }

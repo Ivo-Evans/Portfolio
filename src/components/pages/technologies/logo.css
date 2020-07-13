@@ -1,5 +1,6 @@
 .tech-list__icon {
   padding: 1em 1.25em 0 1em;
+  transition: filter 0.15s ease;
 }
 
 .page--black .about__express-icon {
@@ -29,6 +30,5 @@
 }
 
 .tech-list__icon--selected {
-  transition: all 0.15s ease;
   filter: grayscale(100%);
 }

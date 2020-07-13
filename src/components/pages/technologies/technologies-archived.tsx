@@ -31,7 +31,7 @@ import jiraIcon from "@iconify/icons-logos/jira";
 
 import { ClassInjectionType } from "../../classInjectionType";
 import Logo from "./logo";
-import InfoBox from "./InfoBox";
+// import InfoBox from "./InfoBox";
 import Nav from "../../Nav/Nav";
 import "./technologies.css";
 
@@ -72,14 +72,13 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     <Logo icon={jiraIcon} description="Jira" />,
   ];
 
-  const [selectedTech] = React.useState(false);
+  //   const [selectedTech] = React.useState(false);
   return (
     <div className={classInjection}>
       <Nav />
       <div className="technologies__list">{logos}</div>
-      <div className="technologies__infobox">
-        {selectedTech ? <h2>PlaceHolder</h2> : <InfoBox />}
-      </div>
+      {/* <div className="technologies__infobox">
+      </div> */}
     </div>
   );
 }
