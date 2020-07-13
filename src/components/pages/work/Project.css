@@ -4,14 +4,6 @@
   margin: 2em 0;
 }
 
-.page--white .project a {
-  color: var(--page--white_fg);
-}
-
-.page--black .project a {
-  color: var(--page--black_fg);
-}
-
 .project__image {
   grid-column: 1;
   max-width: 200px;

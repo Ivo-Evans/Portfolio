@@ -9,12 +9,20 @@
   color: var(--page--white_fg);
 }
 
+.page--white a {
+   color: var(--page--white_fg);
+}
+
 .page--black {
   background-color: var(--page--black_bg);
   color: var(--page--black_fg);
 }
 
-/* all of the immediate children of pages with content except Nav elements */
+.page--black a {
+    color: var(--page--black_fg);  
+}
+
+/* all of the immediate children, except Nav elements, of pages with content */
 .page--content > *:not(.nav) {
   max-width: 900px;
   margin-left: auto;
