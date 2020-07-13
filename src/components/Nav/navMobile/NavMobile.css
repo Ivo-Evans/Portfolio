@@ -1,18 +1,25 @@
-.nav--mobile a {
-  margin-bottom: 0.25em;
-}
+
 
 .page--white .nav--mobile a::before,
 .page--black .nav--mobile a::before {
   top: 1.125em;
 }
 
+.page--white .nav--mobile {
+    background-color: white;
+}
+
+.page--black .nav--mobile {
+    background-color: black;
+}
+
 .nav--mobile {
-  padding-top: 1em;
+  position: fixed;
+  z-index: 3;
 }
 
 .nav--mobile a {
   display: inline-block;
-  margin: 0 50vw 0 0;
+  margin: 0 50vw 0.25em 0;
   /* I find this margin inelegant... but it works. The challenge is to set  the width of each element to the miniumum necessary, while still ensuring no other element uses the same line, because the animated underline is a pseudo-element and its width is the width of the anchor */
 }
