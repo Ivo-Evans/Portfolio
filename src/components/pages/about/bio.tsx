@@ -1,5 +1,6 @@
 import React from "react";
 import "./bio.css";
+import { Link } from "react-router-dom"
 
 const resume = require("../../../assets/resume.pdf")
 const self = require("../../../assets/images/self2.jpg")
@@ -8,7 +9,7 @@ export default function Bio() {
   return (
     <div className="bio">
       <img src={self} alt="me"/>
-      <h1>Hi,</h1>
+      <h1>About Me</h1>
       <p>
         I&apos;m a full-stack engineer looking for opportunities in London. I am
         a graduate of and mentor at the bootcamp Founders and Coders, and am
@@ -30,7 +31,7 @@ export default function Bio() {
         Find my resume{" "}
         <a href={resume} rel="noopener noreferrer" target="_blank">
           here
-        </a>
+        </a> or continue on to <Link to="/technologies">my stack</Link>.
       </p>
     </div>
   );

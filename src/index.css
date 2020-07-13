@@ -5,10 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* font sizing */
   --contact__name-size: 3vw;
   --contact__number-size: 5vw;
   --contact__email-size: 2vw;
   --standard-text-size: 1.175em;
+
+  /* colours */
+  --page--black_bg: black;
+  --page--black_fg: white;
+  --page--black_highlight: yellow;
+  --page--white_bg: white;
+  --page--white_fg: black;
+  --page--white_highlight: #b30f00;
 }
 
 code {
@@ -37,5 +46,8 @@ code {
   }
   .contact__banner {
     width: 90vw;
+  }
+  .project {
+      display: inline-block!important;
   }
 }

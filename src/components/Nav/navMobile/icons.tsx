@@ -8,7 +8,7 @@ type IconProps = { open: boolean};
 export default function Icons({ open }: IconProps) {
   return (
     <SwitchTransition mode="in-out">
-      <CSSTransition key={String(open)} classNames="fade" timeout={200}>
+      <CSSTransition key={String(open)} classNames="fade" timeout={100}>
         {open ? <p>X</p> : <p>☰</p>}
       </CSSTransition>
     </SwitchTransition>

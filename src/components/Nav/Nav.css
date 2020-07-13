@@ -15,11 +15,11 @@
 }
 
 .page--white .nav a {
-  color: black;
+  color: var(--page--white_fg);
 }
 
 .page--black .nav a {
-  color: white;
+  color: var(--page--black_fg);
 }
 
 .page--white .nav a::before,
@@ -37,11 +37,11 @@
 }
 
 .page--white .nav a::before {
-  background-color: #b30f00;
+  background-color: var(--page--white_highlight);
 }
 
 .page--black .nav a::before {
-  background-color: yellow;
+  background-color: var(--page--black_highlight);
 }
 
 .page--white .nav a:hover::before,
