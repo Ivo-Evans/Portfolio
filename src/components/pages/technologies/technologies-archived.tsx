@@ -72,12 +72,12 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     <Logo icon={jiraIcon} description="Jira" />,
   ];
 
-  const [selectedTech, setSelectedTech] = React.useState(false);
+  const [selectedTech] = React.useState(false);
   return (
     <div className={classInjection}>
       <Nav />
-      <div className="about__technologies">{logos}</div>
-      <div className="about__infobox">
+      <div className="technologies__list">{logos}</div>
+      <div className="technologies__infobox">
         {selectedTech ? <h2>PlaceHolder</h2> : <InfoBox />}
       </div>
     </div>

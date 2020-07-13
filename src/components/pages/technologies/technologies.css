@@ -1,11 +1,11 @@
-.about__technologies {
+.technologies__list {
   margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.about__infobox {
+.technologies__infobox {
   text-align: center;
   max-width: 50%;
   margin: 0 auto;

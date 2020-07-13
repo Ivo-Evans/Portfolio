@@ -12,35 +12,35 @@ export default function Technologies({ classInjection }) {
   return (
     <div className={classInjection}>
       <Nav />
-      <div className="about__technologies">
+      <div className="technologies__list">
         {technologyList.map((technology) => {
           return (
-              <div
+            <div
               role="button"
               tabIndex={-1}
               onClick={() => {
-                setSelectedTech({... technology})
-                  }}
-            onKeyPress={(e) => {
+                setSelectedTech({ ...technology });
+              }}
+              onKeyPress={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
-                    setSelectedTech({... technology})
-
+                  setSelectedTech({ ...technology });
                 }
-            }}
-              >
-
-                  <Logo
-                    icon={technology.icon}
-                    description={technology.name}
-                    extraClasses={`${technology.classModifier} ${selectedTech.name === technology.name && "about__icon--selected"}`}
-                    height={technology.heightModifier}
-                  />
-
-              </div>
+              }}
+            >
+              <Logo
+                icon={technology.icon}
+                description={technology.name}
+                extraClasses={`${technology.classModifier} ${
+                  selectedTech.name === technology.name &&
+                  "tech-list__icon--selected"
+                }`}
+                height={technology.heightModifier}
+              />
+            </div>
           );
         })}
       </div>
-      <div className="about__infobox">
+      <div className="technologies__infobox">
         {selectedTech ? <h2>PlaceHolder</h2> : <InfoBox />}
       </div>
     </div>
