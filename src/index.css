@@ -38,4 +38,7 @@ code {
   .contact__banner {
     width: 90vw;
   }
+  .project {
+      display: inline-block!important;
+  }
 }
