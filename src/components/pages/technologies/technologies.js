@@ -8,19 +8,35 @@ import Nav from "../../Nav/Nav";
 import "./technologies.css";
 
 export default function Technologies({ classInjection }) {
-  const [selectedTech] = React.useState(false);
+  const [selectedTech, setSelectedTech] = React.useState(true);
   return (
     <div className={classInjection}>
       <Nav />
       <div className="about__technologies">
         {technologyList.map((technology) => {
           return (
-            <Logo
-              icon={technology.icon}
-              description={technology.name}
-              extraClasses={technology.classModifier}
-              height={technology.heightModifier}
-            />
+              <div
+              role="button"
+              tabIndex={-1}
+              onClick={() => {
+                setSelectedTech({... technology})
+                  }}
+            onKeyPress={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    setSelectedTech({... technology})
+
+                }
+            }}
+              >
+
+                  <Logo
+                    icon={technology.icon}
+                    description={technology.name}
+                    extraClasses={`${technology.classModifier} ${selectedTech.name === technology.name && "about__icon--selected"}`}
+                    height={technology.heightModifier}
+                  />
+
+              </div>
           );
         })}
       </div>

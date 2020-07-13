@@ -27,3 +27,8 @@
 .about__icon-box:focus .icon__description {
   filter: opacity(1);
 }
+
+.about__icon--selected {
+    transition: all 0.15s ease;
+    filter: grayscale(100%);
+}
