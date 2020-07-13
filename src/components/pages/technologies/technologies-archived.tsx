@@ -1,10 +1,9 @@
-import React from "react"
-
+import React from "react";
 
 import html5 from "@iconify/icons-logos/html-5";
 import css3 from "@iconify/icons-logos/css-3";
 import javascriptIcon from "@iconify/icons-logos/javascript";
-import typescriptIcon from '@iconify/icons-logos/typescript-icon';
+import typescriptIcon from "@iconify/icons-logos/typescript-icon";
 import nodejsIcon from "@iconify/icons-logos/nodejs";
 import rubyIcon from "@iconify/icons-logos/ruby";
 import pythonIcon from "@iconify/icons-logos/python";
@@ -30,8 +29,9 @@ import githubOctocat from "@iconify/icons-logos/github-octocat";
 import figmaIcon from "@iconify/icons-logos/figma";
 import jiraIcon from "@iconify/icons-logos/jira";
 
-import { ClassInjectionType } from "../../classInjectionType"
+import { ClassInjectionType } from "../../classInjectionType";
 import Logo from "./logo";
+import InfoBox from "./InfoBox";
 import Nav from "../../Nav/Nav";
 import "./technologies.css";
 
@@ -71,10 +71,15 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     <Logo icon={figmaIcon} description="Figma" />,
     <Logo icon={jiraIcon} description="Jira" />,
   ];
+
+  const [selectedTech, setSelectedTech] = React.useState(false);
   return (
     <div className={classInjection}>
-    <Nav />
-    <div className="about__technologies">{logos}</div>
-</div>
-  )
+      <Nav />
+      <div className="about__technologies">{logos}</div>
+      <div className="about__infobox">
+        {selectedTech ? <h2>PlaceHolder</h2> : <InfoBox />}
+      </div>
+    </div>
+  );
 }
