@@ -2,6 +2,8 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import "./InfoBox.css";
+import "../../../animations.css";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 export default function InfoBox({
   icon,
@@ -36,17 +38,21 @@ export default function InfoBox({
     );
   }
   return (
-    <>
-      <h2 className="infobox__title">{name}</h2>
-      <div className="infobox__icon-box">
-        <Icon
-          className={`infobox__icon ${classModifier}`}
-          width={size || "5em"}
-          icon={icon}
-        />
-      </div>
-      <p className="infobox__comment"> {comment}</p>
-      <p className="infobox__links">{linksElement}</p>
-    </>
+    <SwitchTransition mode="out-in">
+      <CSSTransition key={name} classNames="tech-fade" timeout={200}>
+        <article className="technologies__infobox">
+          <h2 className="infobox__title">{name}</h2>
+          <div className="infobox__icon-box">
+            <Icon
+              className={`infobox__icon ${classModifier}`}
+              width={size || "5em"}
+              icon={icon}
+            />
+          </div>
+          <p className="infobox__comment"> {comment}</p>
+          <p className="infobox__links">{linksElement}</p>
+        </article>
+      </CSSTransition>
+    </SwitchTransition>
   );
 }

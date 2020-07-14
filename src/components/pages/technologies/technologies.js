@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-
 import Logo from "./logo";
 import technologyList from "./technologylist";
 import InfoBox from "./InfoBox";
 import Nav from "../../Nav/Nav";
 import "./technologies.css";
+import "../../../animations.css";
 
 export default function Technologies({ classInjection }) {
   const [selectedTech, setSelectedTech] = React.useState(true);
@@ -40,20 +40,15 @@ export default function Technologies({ classInjection }) {
           );
         })}
       </div>
-      <article className="technologies__infobox">
-        {selectedTech.enabled ? (
-          <InfoBox
-            name={selectedTech.name}
-            icon={selectedTech.icon}
-            comment={selectedTech.comment}
-            links={selectedTech.links}
-            size={selectedTech.infoBoxWidth}
-            classModifier={selectedTech.classModifier}
-          />
-        ) : (
-          <h2>PlaceHolder</h2>
-        )}
-      </article>
+
+      <InfoBox
+        name={selectedTech.name}
+        icon={selectedTech.icon}
+        comment={selectedTech.comment}
+        links={selectedTech.links}
+        size={selectedTech.infoBoxWidth}
+        classModifier={selectedTech.classModifier}
+      />
     </div>
   );
 }
