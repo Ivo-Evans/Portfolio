@@ -91,7 +91,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm comfortable with HTML, but nowadays it seems like I write a lot more JSX. When I'm writing HTML, I always try to write semantic HTML.",
+      "I'm comfortable with HTML, but nowadays it seems like I write a lot more JSX. When I'm writing HTML, I endeavour to write semantic HTML.",
   },
   {
     icon: css3,
@@ -143,7 +143,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "PostgreSQL is the solid backbone of many of my projects. I prefer relational to noSQL databases, because I think there's a lot of value in a well thought-out schema.",
+      "PostgreSQL is the solid backbone of many of my projects. I prefer relational to noSQL databases, because I like it when things make sense.",
     links: [projects.cardleyApi, projects.snippetsOfCode],
   },
   //   {
@@ -190,7 +190,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm well-used to React, and a fan primarily because of it's benefits to the developer experience. This site, like many of my projecs, uses React.",
+      "I'm well-used to React, and a fan primarily because of its benefits to the developer experience. This site, like many of my projecs, uses React.",
     links: [projects.zaatari, projects.portfolio],
   },
   {
@@ -242,7 +242,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I've used CodeCov in a few projects now, and I think it's a useful way of assessing code coverage.",
+      "I've used CodeCov in a few projects now, and I think its a useful way of assessing code coverage.",
   },
   {
     icon: travisCi,
@@ -275,7 +275,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm comfortable with Netlify, having used it to deploy sites, send API queries with lambda functions, and configure DNS.",
+      "I'm comfortable with Netlify, having used it to do things like deploy sites, send API queries with lambda functions, and configure DNS.",
     links: [projects.zaatari, projects.spotify],
   },
   {
@@ -302,7 +302,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm a great fan of Docker. Running an app inside a container and then interfacing with the host operating system by exposing ports is fascinating to me.",
+      "I'm a great fan of Docker. I find running an app inside a container, and then interfacing with the host operating system by exposing ports, fascinating.",
     links: [projects.portfolio],
   },
   {
@@ -327,7 +327,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "Figma is a useful design tool. I appreciate it's prototype view, and the ability for multiple team-members to get on a design at once.",
+      "Figma is a useful design tool. I appreciate its prototype view, and the ability for multiple team-members to get on a design at once.",
     links: [projects.cardleyPrototype, projects.zaatariPrototype],
   },
   {
@@ -336,7 +336,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "Like many, I have a love-hate relationship with Jira. But I do know how to use it. I even wrote an NPM package to help our team use Jira smart-commits with Git.",
+      "Like many, I have a love-hate (or you could even say hate-hate) relationship with Jira. But I do know how to use it. I even wrote an NPM package to help our team use Jira smart-commits with Git.",
     links: [projects.transparentCommitizen],
   },
 ];
