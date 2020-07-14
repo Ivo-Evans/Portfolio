@@ -1,7 +1,7 @@
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 2em 0;
+  margin: 3em 0 6em 0;
 }
 
 .project__image {
@@ -22,7 +22,7 @@
   margin-top: 0;
   grid-row: 1;
   grid-column: 1/3;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .project__description {
@@ -55,4 +55,14 @@
 
 .project__description p {
   margin-top: 0;
+}
+
+.page--white .project__text h2 a {
+  color: var(--page--white_highlight);
+  text-decoration: none !important;
+}
+
+.page--black .project__text h2 a {
+  color: var(--page--black_highlight);
+  text-decoration: none !important;
 }

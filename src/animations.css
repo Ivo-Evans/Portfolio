@@ -49,3 +49,25 @@
 .fade-exit-active {
   transition: opacity 100ms;
 }
+
+/* tech highlight in stack */
+.tech-fade-enter {
+  opacity: 0.2;
+}
+
+.tech-fade-enter-active {
+  opacity: 1;
+}
+
+.tech-fade-exit {
+  opacity: 1;
+}
+
+.tech-fade-exit-active {
+  opacity: 0.1;
+}
+
+.tech-fade-enter-active,
+.tech-fade-exit-active {
+  transition: opacity 200ms;
+}

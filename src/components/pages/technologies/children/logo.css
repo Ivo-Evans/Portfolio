@@ -1,12 +1,13 @@
-.about__icon {
+.tech-list__icon {
   padding: 1em 1.25em 0 1em;
+  transition: filter 0.15s ease;
 }
 
 .page--black .about__express-icon {
   filter: invert(100%);
 }
 
-.about__icon-box {
+.tech-list__icon-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +15,7 @@
   position: relative;
 }
 
-.icon__description {
+.tech-list__icon-description {
   margin-top: 0.25em;
   text-align: center;
   font-size: 0.75em;
@@ -23,7 +24,11 @@
   transition: 0.1s filter linear, 0.1s -webkit-filter linear;
 }
 
-.about__icon-box:hover .icon__description,
-.about__icon-box:focus .icon__description {
+.tech-list__icon-box:hover .tech-list__icon-description,
+.tech-list__icon-box:focus .tech-list__icon-description {
   filter: opacity(1);
+}
+
+.tech-list__icon--selected {
+  filter: grayscale(100%);
 }

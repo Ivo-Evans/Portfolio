@@ -48,6 +48,14 @@ code {
     width: 90vw;
   }
   .project {
-      display: inline-block!important;
+    display: inline-block !important;
+  }
+  .technologies__infobox {
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  .technologies__infobox > * {
+    margin: 1em auto !important;
   }
 }
