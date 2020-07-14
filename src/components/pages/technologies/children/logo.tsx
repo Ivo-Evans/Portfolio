@@ -1,16 +1,9 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import { IconifyIcon } from "@iconify/types";
 import "./logo.css";
+import * as types from "../types"
 
-type LogoType = {
-  icon: IconifyIcon;
-  description: string;
-  height: string;
-  extraClasses: string;
-};
-
-const Logo = ({ icon, description, height, extraClasses }: LogoType) => {
+const Logo = ({ icon, description, height, extraClasses }: types.logo) => {
   return (
     <div className="tech-list__icon-box" tabIndex={0} role="tab">
       <Icon

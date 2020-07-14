@@ -1,14 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import Logo from "./logo";
+import Logo from "./children/logo";
 import technologyList from "./technologylist";
-import InfoBox from "./InfoBox";
+import InfoBox from "./children/InfoBox";
 import Nav from "../../Nav/Nav";
 import "./technologies.css";
 import "../../../animations.css";
+import { ClassInjectionType } from "../../classInjectionType"
+import * as types from "./types"
 
-export default function Technologies({ classInjection }) {
-  const [selectedTech, setSelectedTech] = React.useState(true);
+
+export default function Technologies({ classInjection }: ClassInjectionType) {
+  const [selectedTech, setSelectedTech] = React.useState<types.ISelectedTech>({});
   return (
     <div className={classInjection}>
       <Nav />
@@ -40,14 +43,16 @@ export default function Technologies({ classInjection }) {
           );
         })}
       </div>
-      <InfoBox
-        name={selectedTech.name}
-        icon={selectedTech.icon}
-        comment={selectedTech.comment}
-        links={selectedTech.links}
-        size={selectedTech.infoBoxWidth}
-        classModifier={selectedTech.classModifier}
-      />
+      {
+          typeof selectedTech === "object" &&
+          <InfoBox
+            name={selectedTech.name}
+            icon={selectedTech.icon}
+            comment={selectedTech.comment}
+            links={selectedTech.links}
+            classModifier={selectedTech.classModifier}
+          />
+      }
     </div>
   );
 }

@@ -1,18 +1,17 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { Icon } from "@iconify/react";
 import "./InfoBox.css";
-import "../../../animations.css";
+import "../../../../animations.css";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+import * as types from "../types"
 
 export default function InfoBox({
   icon,
   name,
   comment,
   links,
-  size,
   classModifier,
-}) {
+}: types.infoBox) {
   let linksElement;
   if (!links) {
     linksElement = null;
@@ -43,11 +42,13 @@ export default function InfoBox({
         <article className="technologies__infobox">
           <h2 className="infobox__title">{name}</h2>
           <div className="infobox__icon-box">
-            <Icon
-              className={`infobox__icon ${classModifier}`}
-              width={size || "5em"}
-              icon={icon}
-            />
+            {typeof icon === "object" && (
+              <Icon
+                className={`infobox__icon ${classModifier}`}
+                width="5em"
+                icon={icon}
+              />
+            )}
           </div>
           <p className="infobox__comment"> {comment}</p>
           <p className="infobox__links">{linksElement}</p>

@@ -28,7 +28,10 @@ import githubOctocat from "@iconify/icons-logos/github-octocat";
 import figmaIcon from "@iconify/icons-logos/figma";
 import jiraIcon from "@iconify/icons-logos/jira";
 
-const projects = {
+import * as types from "./types"
+
+
+const projects: types.projects = {
   portfolio: {
     title: "Portfolio site",
     link: "https://github.com/Ivo-Evans/portfolio",
@@ -81,7 +84,7 @@ const projects = {
   },
 };
 
-export default [
+const technologies: types.technology[] = [
   {
     icon: html5,
     name: "HTML5",
@@ -337,3 +340,5 @@ export default [
     links: [projects.transparentCommitizen],
   },
 ];
+
+export default technologies
