@@ -40,7 +40,6 @@ export default function Technologies({ classInjection }) {
           );
         })}
       </div>
-
       <InfoBox
         name={selectedTech.name}
         icon={selectedTech.icon}
