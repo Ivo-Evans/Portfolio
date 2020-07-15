@@ -16,23 +16,18 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
       <Nav />
-      <main>
         <article className="technologies__list">
           {technologyList.map((technology) => {
             return (
-              <div
-                role="button"
-                tabIndex={-1}
-                onClick={() => {
-                  setSelectedTech({ enabled: true, ...technology });
-                }}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    setSelectedTech({ enabled: true, ...technology });
-                  }
-                }}
-              >
                 <Logo
+                  onClick={() => {
+                    setSelectedTech({ enabled: true, ...technology });
+                  }}
+                  onKeyPress={(e: React.KeyboardEvent) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setSelectedTech({ enabled: true, ...technology });
+                    }
+                  }}
                   icon={technology.icon}
                   description={technology.name}
                   extraClasses={`${technology.classModifier} ${
@@ -41,7 +36,6 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
                   }`}
                   height={technology.heightModifier}
                 />
-              </div>
             );
           })}
         </article>
@@ -54,7 +48,6 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
             classModifier={selectedTech.classModifier}
           />
         )}
-      </main>
     </div>
   );
 }

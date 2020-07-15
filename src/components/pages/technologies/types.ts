@@ -2,9 +2,11 @@ import { IconifyIcon } from "@iconify/types"
 
 export type logo = {
     icon: IconifyIcon;
-    description: string;
+    description?: string;
     height: string;
-    extraClasses: string;
+    extraClasses?: string;
+    onClick: any;
+    onKeyPress: any;
   };
   
 export type project = {
