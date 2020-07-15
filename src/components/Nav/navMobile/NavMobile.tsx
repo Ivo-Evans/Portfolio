@@ -2,7 +2,7 @@ import React from "react";
 import Icons from "./icons";
 import "./icons.css";
 import "./NavMobile.css";
-import NavLinks from "../NavLinks";
+import NavItems from "./NavItems"
 
 export default function NavMobile() {
   const [open, setOpen] = React.useState(false);
@@ -17,7 +17,6 @@ export default function NavMobile() {
     }
   };
 
-
   return (
     <nav className="nav nav--mobile">
       <div
@@ -29,7 +28,8 @@ export default function NavMobile() {
       >
         <Icons open={open} />
       </div>
-      {open && NavLinks}
+      <NavItems open={open} />
+      {/* {open && NavLinks} */}
     </nav>
   );
 }
