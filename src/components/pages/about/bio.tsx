@@ -7,7 +7,7 @@ const self = require("../../../assets/images/self2.jpg")
 
 export default function Bio() {
   return (
-    <div className="bio">
+    <main className="bio">
       <img src={self} alt="me"/>
       <h1>About Me</h1>
       <p>
@@ -33,6 +33,6 @@ export default function Bio() {
           here
         </a> or continue on to <Link to="/technologies">my stack</Link>.
       </p>
-    </div>
+    </main>
   );
 }

@@ -9,7 +9,7 @@ export default function Home({ classInjection }: ClassInjectionType) {
   return (
     <div className={classInjection}>
       <Nav />
-      <div className="central-banner">
+      <main className="central-banner">
         <h1 className="strapline">
             Hi,<br />
           my name is <Link to="/about" className="strapline__name">Ivo Evans.
@@ -22,7 +22,7 @@ export default function Home({ classInjection }: ClassInjectionType) {
           <p>Express</p>
           <p>PostgreSQL</p>
         </div> */}
-      </div>
+      </main>
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function NavMobile() {
 
 
   return (
-    <div className="nav nav--mobile">
+    <nav className="nav nav--mobile">
       <div
         className="icon"
         onKeyPress={toggleOpenKey}
@@ -30,6 +30,6 @@ export default function NavMobile() {
         <Icons open={open} />
       </div>
       {open && NavLinks}
-    </div>
+    </nav>
   );
 }
