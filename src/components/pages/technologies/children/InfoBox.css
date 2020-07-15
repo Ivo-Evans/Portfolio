@@ -4,6 +4,7 @@
   grid-template-rows: auto auto auto;
   width: 50%;
   margin: 0 auto;
+  margin-top: 1em;
 }
 
 .technologies__infobox * {
