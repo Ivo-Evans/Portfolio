@@ -6,5 +6,5 @@ import NavMobile from "./navMobile/NavMobile";
 
 export default function Nav() {
   const { width } = useWindowDimensions();
-  return <>{width > 900 ? <NavDesktop /> : <NavMobile />}</>;
+  return <>{width > 950 ? <NavDesktop /> : <NavMobile />}</>;
 }

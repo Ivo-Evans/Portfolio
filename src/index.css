@@ -38,7 +38,7 @@ code {
 }
 
 /* the breakpoint is also coded in JS in the component Nav */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
   body {
     --contact__name-size: 5vw;
     --contact__number-size: 7vw;
