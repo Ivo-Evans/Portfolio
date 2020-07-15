@@ -12,11 +12,11 @@ body {
   --standard-text-size: 1.175em;
 
   /* colours */
-  --page--black_bg: black;
-  --page--black_fg: white;
-  --page--black_highlight: yellow;
-  --page--white_bg: white;
-  --page--white_fg: black;
+  --page--black_bg: #000;
+  --page--black_fg: #fff;
+  --page--black_highlight: #ffff00;
+  --page--white_bg: #fff;
+  --page--white_fg: #000;
   --page--white_highlight: #b30f00;
 }
 
