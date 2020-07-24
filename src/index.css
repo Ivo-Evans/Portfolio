@@ -28,13 +28,13 @@ code {
 @font-face {
   font-family: "Merriweather";
   src: local("Merriweather Regular"),
-    url(./assets/fonts/merriweather/Merriweather-Regular.ttf) format("truetype");
+    url(./assets/fonts/Merriweather-Regular.woff);
 }
 
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Regular"),
-    url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+    url(./assets/fonts/Roboto-Regular.woff);
 }
 
 /* the breakpoint is also coded in JS in the component Nav */
