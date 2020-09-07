@@ -1,20 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import Nav from "../../Nav/Nav";
-import "../page.css";
+import { Link } from "react-router-dom";
 import "./home.css";
-import { ClassInjectionType } from "../../classInjectionType"
+import Page from "../../Page/Page";
 
 export default function Home({ classInjection }: ClassInjectionType) {
   return (
-    <div className={classInjection}>
-      <Nav />
+    <Page classInjection={classInjection}>
       <main className="central-banner">
         <h1 className="strapline">
-            Hi,<br />
-          my name is <Link to="/about" className="strapline__name">Ivo Evans.
-          </Link> <br />{" "}
-          I make experiences for the modern web.
+          Hi,
+          <br />
+          my name is{" "}
+          <Link to="/about" className="strapline__name">
+            Ivo Evans.
+          </Link>{" "}
+          <br /> I make experiences for the modern web.
         </h1>
         {/* <div className="stack">
           <p>React</p>
@@ -23,7 +23,6 @@ export default function Home({ classInjection }: ClassInjectionType) {
           <p>PostgreSQL</p>
         </div> */}
       </main>
-    </div>
+    </Page>
   );
 }
-

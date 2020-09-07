@@ -4,8 +4,7 @@ TOP LEVEL DOC COMMENT
 The purpose of this component is to animate transitions between pages.
 During the transition two pages are visible on the screen, but the 
 oncoming page must have opposite styling to the exiting page. For this
-reason you need a more involved approach than a global switch for styles. 
-I used useReducer to mediate class possession for pages.
+reason you need a more involved approach than a global switch for styles. This function is both a React Router Switch statement with RTC animations, and mediates between pages re class ownership.
 */
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";

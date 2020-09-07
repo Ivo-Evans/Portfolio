@@ -1,0 +1,38 @@
+/* Layout */
+.page {
+  min-height: 100vh;
+  padding: 3vmin;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+/* _When_ a page has content, define it's main area like this */
+.page--content > .page__main {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Theming */
+.page--white {
+  background-color: var(--page--white_bg);
+  color: var(--page--white_fg);
+}
+
+.page--white a {
+  color: var(--page--white_fg);
+}
+
+.page--black {
+  background-color: var(--page--black_bg);
+  color: var(--page--black_fg);
+}
+
+.page--black a {
+  color: var(--page--black_fg);
+}

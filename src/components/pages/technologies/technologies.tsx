@@ -3,10 +3,9 @@ import React from "react";
 import Logo from "./children/logo";
 import technologyList from "./technologylist";
 import InfoBox from "./children/InfoBox";
-import Nav from "../../Nav/Nav";
+import Page from "../../Page/Page"
 import "./technologies.css";
 import "../../../animations.css";
-import { ClassInjectionType } from "../../classInjectionType";
 import * as types from "./types";
 
 export default function Technologies({ classInjection }: ClassInjectionType) {
@@ -14,8 +13,7 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     {},
   );
   return (
-    <div className={classInjection}>
-      <Nav />
+    <Page classInjection={classInjection}>
         <article className="technologies__list">
           {technologyList.map((technology) => {
             return (
@@ -48,6 +46,6 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
             classModifier={selectedTech.classModifier}
           />
         )}
-    </div>
+    </Page>
   );
 }

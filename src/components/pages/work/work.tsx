@@ -1,9 +1,8 @@
 import React from "react";
-import "../page.css";
+// import "../page.css";
 
-import Nav from "../../Nav/Nav";
+import Page from "../../Page/Page";
 import Project from "./Project";
-import { ClassInjectionType } from "../../classInjectionType"
 
 import humanibaseImage from "../../../assets/images/projects/humanibase_cropped.png";
 import apiImage from "../../../assets/images/projects/api_cropped.jpg";
@@ -11,8 +10,7 @@ import cardleyImage from "../../../assets/images/projects/cardley_cropped.png";
 
 export default function Work({ classInjection }: ClassInjectionType) {
   return (
-    <div className={classInjection}>
-      <Nav />
+    <Page classInjection={classInjection}>
       <Project
         name="Humanibase"
         description="Humanibase is a platform for hosting and uploading audio workshops for those in refugee camps. We developed it for Zaatari Radio, which operates a radio station across Jordan and London."
@@ -36,6 +34,6 @@ export default function Work({ classInjection }: ClassInjectionType) {
         codeLink="https://github.com/fac19/cardley"
         deployLink="https://cardley.netlify.app/"
       />
-    </div>
+    </Page>
   );
 }
