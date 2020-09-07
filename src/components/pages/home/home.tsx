@@ -6,7 +6,7 @@ import Page from "../../Page/Page";
 export default function Home({ classInjection }: ClassInjectionType) {
   return (
     <Page classInjection={classInjection}>
-      <main className="central-banner">
+      <div className="central-banner">
         <h1 className="strapline">
           Hi,
           <br />
@@ -16,13 +16,7 @@ export default function Home({ classInjection }: ClassInjectionType) {
           </Link>{" "}
           <br /> I make experiences for the modern web.
         </h1>
-        {/* <div className="stack">
-          <p>React</p>
-          <p>Node</p>
-          <p>Express</p>
-          <p>PostgreSQL</p>
-        </div> */}
-      </main>
+      </div>
     </Page>
   );
 }

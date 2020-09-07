@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "./children/logo";
 import technologyList from "./technologylist";
 import InfoBox from "./children/InfoBox";
-import Page from "../../Page/Page"
+import Page from "../../Page/Page";
 import "./technologies.css";
 import "../../../animations.css";
 import * as types from "./types";
@@ -14,9 +14,10 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
   );
   return (
     <Page classInjection={classInjection}>
-        <article className="technologies__list">
-          {technologyList.map((technology) => {
-            return (
+
+          <article className="technologies__list">
+            {technologyList.map((technology) => {
+              return (
                 <Logo
                   onClick={() => {
                     setSelectedTech({ enabled: true, ...technology });
@@ -34,18 +35,19 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
                   }`}
                   height={technology.heightModifier}
                 />
-            );
-          })}
-        </article>
-        {typeof selectedTech === "object" && (
-          <InfoBox
-            name={selectedTech.name}
-            icon={selectedTech.icon}
-            comment={selectedTech.comment}
-            links={selectedTech.links}
-            classModifier={selectedTech.classModifier}
-          />
-        )}
+              );
+            })}
+
+          </article>
+          {typeof selectedTech === "object" && (
+              <InfoBox
+                name={selectedTech.name}
+                icon={selectedTech.icon}
+                comment={selectedTech.comment}
+                links={selectedTech.links}
+                classModifier={selectedTech.classModifier}
+              />
+            )}
     </Page>
   );
 }

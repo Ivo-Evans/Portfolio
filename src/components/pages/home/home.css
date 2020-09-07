@@ -1,8 +1,12 @@
 .central-banner {
-  position: absolute;
+  /* position: absolute;
   top: 60vh;
   transform: translateY(-50%);
-  width: 75%;
+  width: 75%; */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .strapline {
