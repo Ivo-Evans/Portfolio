@@ -6,7 +6,7 @@ import InfoBox from "./children/InfoBox";
 import Page from "../../Page/Page";
 import "./technologies.css";
 import "../../../animations.css";
-import * as types from "./types";
+import * as types from "./technologies.types";
 
 export default function Technologies({ classInjection }: ClassInjectionType) {
   const [selectedTech, setSelectedTech] = React.useState<types.ISelectedTech>(

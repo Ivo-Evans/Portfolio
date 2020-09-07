@@ -8,8 +8,10 @@ import pythonIcon from "@iconify/icons-logos/python";
 import expressIcon from "@iconify/icons-logos/express";
 import flaskIcon from "@iconify/icons-cib/flask";
 import postgresqlIcon from "@iconify/icons-logos/postgresql";
-// import mongodbIcon from "@iconify/icons-cib/mongodb";
+import mongodbIcon from "@iconify/icons-cib/mongodb";
+import graphqlIcon from "@iconify/icons-logos/graphql";
 import reactIcon from "@iconify/icons-logos/react";
+import gatsbyIcon from "@iconify/icons-logos/gatsby";
 import materialUi from "@iconify/icons-logos/material-ui";
 import styledComponents from "@iconify/icons-simple-icons/styled-components";
 import storybookIcon from "@iconify/icons-logos/storybook-icon";
@@ -21,6 +23,7 @@ import eslintIcon from "@iconify/icons-logos/eslint";
 import netlifyIcon from "@iconify/icons-logos/netlify";
 import herokuIcon from "@iconify/icons-logos/heroku-icon";
 import googleCloudPlatform from "@iconify/icons-logos/google-cloud-platform";
+import awsIcon from "@iconify/icons-logos/aws";
 import dockerIcon from "@iconify/icons-logos/docker-icon";
 import postmanIcon from "@iconify/icons-logos/postman";
 import gitIcon from "@iconify/icons-logos/git-icon";
@@ -28,8 +31,8 @@ import githubOctocat from "@iconify/icons-logos/github-octocat";
 import figmaIcon from "@iconify/icons-logos/figma";
 import jiraIcon from "@iconify/icons-logos/jira";
 
-import * as types from "./types"
 
+import * as types from "./technologies.types";
 
 const projects: types.projects = {
   portfolio: {
@@ -82,6 +85,10 @@ const projects: types.projects = {
     link:
       "https://www.figma.com/file/WcsS1OxRsROl1dUqBH1e9t/Project-Zataari-FAC?node-id=0%3A1",
   },
+  wla: {
+    title: "SkillsWest.London",
+    link: "https://www.skillswest.london/",
+  },
 };
 
 const technologies: types.technology[] = [
@@ -91,7 +98,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm comfortable with HTML, but nowadays it seems like I write a lot more JSX. When I'm writing HTML, I endeavour to write semantic HTML.",
+      "I'm comfortable with HTML, although nowadays it seems like I write a lot more JSX. When writing markup, I endeavour to write it semantically.",
   },
   {
     icon: css3,
@@ -99,7 +106,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I find CSS a pleasant diversion from programming. I enjoyed writing the CSS for this site, where I got to flex my skills a little by using pseudo-elements and advanced combinators.",
+      "I find CSS a pleasant diversion from programming and from algorithmic thinking. I enjoyed writing the CSS for this site, where I got to flex my skills a little by using pseudo-elements and advanced combinators. I'm a fan of both CSS-in-JSS and old school use of the cascade.",
     links: [projects.portfolio],
   },
   {
@@ -108,7 +115,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "JavaScript is my bread and butter. It is the language I 'think' in, and the language I go to when I need to make something difficult or something no-nonsense in a short space of time. I love JavaScript most for its usability across the stack - least for its type coercion.",
+      "JavaScript is my bread and butter. It is the language I 'think' in, and the language I go to when I need to make something difficult or something in a short space of time. I love JavaScript most for its usability across the stack - least for its type coercion.",
   },
   {
     icon: typescriptIcon,
@@ -116,7 +123,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "TypeScript is the seasoning that makes the meal when it comes to JavaScript. I'm a big fan, and I think I'll be using it for years to come.",
+      "Once learnt, TypeScript is difficult to give up.  I find typechecking at compile-time invaluable.",
     links: [projects.portfolio],
   },
   {
@@ -134,7 +141,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I appreciate Python for its clean syntax, for its treatment of OOP, and for its useful features like list comprehensions and generators.",
+      "As someone that codes primarily in JavaScript, but started out with Ruby, Python is something of a best of both worlds. I appreciate its treatment of OOP, its first-class functions and its clean syntax.",
     links: [projects.citadelsApi, projects.localLibrary],
   },
   {
@@ -143,18 +150,18 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "PostgreSQL is the solid backbone of many of my projects. I prefer relational to noSQL databases, because I like it when things make sense.",
+      "A lot of my projects are backed, ultimately, by PostgreSQL, the reliable elephant supporting technologies higher up in the stack. I prefer to use relational to noSQL databases where possible - I like it when things make sense.",
     links: [projects.cardleyApi, projects.snippetsOfCode],
   },
-  //   {
-  //     icon: mongodbIcon,
-  //     name: "MongoDB",
-  //     experience: 5,
-  //     interest: 5,
-  //     comment:
-  //       "MongoDB is the technology on this list that I have the least experience with, although I did make an API with it. That said, I have an understanding of when you should use a noSQL database over a relational one, and how you might do so.",
-  //     links: [projects.citadelsApi],
-  //   },
+    {
+      icon: mongodbIcon,
+      name: "MongoDB",
+      experience: 5,
+      interest: 5,
+      comment:
+        "MongoDB is the technology on this list that I have the least experience with, although I did make a side-project API with it. I have a functional understanding of using documents and collections, and I'm not afraid to reach for a noSQL database like Mongo if the data is inherently unstructured, or is structured as a tree.",
+      links: [projects.citadelsApi],
+    },
   {
     icon: nodejsIcon,
     name: "Node.JS",
@@ -185,31 +192,48 @@ const technologies: types.technology[] = [
     links: [projects.citadelsApi],
   },
   {
+      icon: graphqlIcon,
+      name: "GraphQL",
+      experience: 5,
+      interest: 5,
+      comment: "GraphQL is a nice query language, and something that web development, frankly, needs. REST is inefficient, but it would be insanity to make raw queries to the database. GraphQL provides a standardised syntax for information interchange between modern front and back ends, and for that, it is invaluable.",
+      links: [projects.wla]
+  },
+  {
     icon: reactIcon,
     name: "React",
     experience: 5,
     interest: 5,
     comment:
       "I'm well-used to React, and a fan primarily because of its benefits to the developer experience. This site, like many of my projecs, uses React.",
-    links: [projects.zaatari, projects.portfolio],
+    links: [projects.wla, projects.portfolio, projects.zaatari],
   },
   {
-    icon: materialUi,
-    name: "Material UI",
-    experience: 5,
-    interest: 5,
+    icon: gatsbyIcon,
+    name: "Gatsby",
+    experience: 3,
+    interest: 4,
     comment:
-      "Material UI can be helpful for developing an MVP. For a bespoke experience, however, I prefer to write my own components.",
-    links: [projects.cardleyFrontend],
+      "Developer experience is by and large fantastic with Gatsby, and I value the ability to easily create static sites with React that it allows me.",
+    links: [projects.wla],
   },
+    // {
+    //   icon: materialUi,
+    //   name: "Material UI",
+    //   experience: 5,
+    //   interest: 5,
+    //   comment:
+    //     "Material UI can be helpful for developing an MVP. For a bespoke experience, however, I prefer to write my own components.",
+    //   links: [projects.cardleyFrontend],
+    // },
   {
     icon: styledComponents,
     name: "Styled Components",
     experience: 5,
     interest: 5,
     comment:
-      "I find Styled Components, alongside tools like Storybook, to be a useful way of writing modular, distinct UI elements.",
-    links: [projects.zaatari],
+      "I think that CSS-in-JS is the future, and that post-processors like styled components and emotion capitalise on many, although not all, of the achievements of pre-processors like SASS.",
+    links: [projects.wla, projects.zaatari],
   },
   {
     icon: storybookIcon,
@@ -233,7 +257,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "Postman is a pleasant alternative to cURL. I appreciate in particular its saveable and shareable collections.",
+      "Postman is a solid option for API testing and development, for which I use a mixture of Postman, cURL and Insomnia as suits my needs.",
     links: [projects.citadelsApi],
   },
   {
@@ -242,7 +266,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I've used CodeCov in a few projects now, and I think its a useful way of assessing code coverage.",
+      "I've used CodeCov in a few projects now, and I find it a useful way of assessing code coverage.",
   },
   {
     icon: travisCi,
@@ -284,7 +308,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm comfortable with Heroku. If there's a need for a quick and seamless server deployment, I'd certainly consider it. If price and performance are criteria, I'd generally opt for Google Cloud Platform.",
+      "I'm comfortable with Heroku. If there's a need for a quick and seamless server deployment, I'd certainly consider it. If performance or fine-tuning are necessary, I would opt for GCP or AWS.",
     links: [projects.cardleyApi, projects.snippetsOfCode],
   },
   {
@@ -293,8 +317,17 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I enjoy Google Cloud Platform for its performance and the degree of control that it gives me.",
+      "I enjoy Google Cloud Platform for its performance and the degree of control that it gives me. It's good compromise, in terms of control and ease of use, between Heroku and AWS.",
     links: [projects.portfolio],
+  },
+  {
+    icon: awsIcon,
+    name: "AWS",
+    experience: 3,
+    interest: 3,
+    comment:
+      "I could say I am experienced with AWS, but of course AWS is a broad church. So what have I used? EC2, RDS PostgreSQL, S3 and Amazon Amplify.",
+    links: [projects.wla],
   },
   {
     icon: dockerIcon,
@@ -311,7 +344,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm certainly experienced with Git, and I appreciate it as a tool. At time of writing I've made ~1,700 commits to GitHub alone - you can bet your bucks that things have gotten gnarly a few times along the road, and I've learnt a lot in the process. I even got into writing Husky extensions for a while, so I've looked into advanced Git features like submodules and subtrees.",
+      "I make thousands of commits a year, so I am well-acquainted with it. I even got into writing Husky extensions for a while, so I've looked into advanced Git features like submodules and subtrees.",
   },
   {
     icon: githubOctocat,
@@ -341,4 +374,4 @@ const technologies: types.technology[] = [
   },
 ];
 
-export default technologies
+export default technologies;

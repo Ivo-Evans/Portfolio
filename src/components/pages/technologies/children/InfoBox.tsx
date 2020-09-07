@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import "./InfoBox.css";
 import "../../../../animations.css";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
-import * as types from "../types"
+import * as types from "../technologies.types"
 
 export default function InfoBox({
   icon,

@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import "./logo.css";
-import * as types from "../types";
+import * as types from "../technologies.types"
 
 const Logo = ({
   icon,
@@ -10,7 +10,7 @@ const Logo = ({
   extraClasses,
   onClick,
   onKeyPress,
-}: types.logo) => {
+}: types.logoType) => {
   return (
     <div
       onClick={onClick}

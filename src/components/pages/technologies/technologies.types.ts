@@ -1,6 +1,6 @@
 import { IconifyIcon } from "@iconify/types"
 
-export type logo = {
+export type logoType = {
     icon: IconifyIcon;
     description?: string;
     height: string;
