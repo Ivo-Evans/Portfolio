@@ -1,13 +1,13 @@
 .nav--mobile-links {
-    transition: height 0.5s ease-in;
+    transition: max-height 0.4s linear;
     overflow: hidden;
 }
 
 .nav--closed {
-    height: 0;
+    max-height: 0;
 }
 
 .nav--open {
-    height: 50vh;
-    /* max-height: 100vh; */
+    height: auto;
+    max-height: 50vh;
 }

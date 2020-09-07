@@ -13,6 +13,9 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     {},
   );
   const infoBoxRef = React.useRef<null | HTMLDivElement>(null);
+  const scrollToBottom = () => infoBoxRef?.current?.scrollIntoView({
+    behavior: "smooth",
+  });
   return (
     <Page classInjection={classInjection}>
       <article className="technologies__list">
@@ -21,18 +24,13 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
             <Logo
               onClick={() => {
                 setSelectedTech({ enabled: true, ...technology });
-                return infoBoxRef?.current?.scrollIntoView({
-                  behavior: "smooth",
-                });
+                scrollToBottom()
               }}
               onKeyPress={(e: React.KeyboardEvent) => {
                 if (e.key === "Enter" || e.key === " ") {
                   setSelectedTech({ enabled: true, ...technology });
-                  return infoBoxRef?.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
+                  scrollToBottom()
                 }
-                return null;
               }}
               icon={technology.icon}
               description={technology.name}

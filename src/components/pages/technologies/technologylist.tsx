@@ -98,7 +98,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I'm comfortable with HTML, although nowadays it seems like I write a lot more JSX. When writing markup, I endeavour to write it semantically.",
+      "I'm comfortable with HTML, although nowadays it seems like I write a lot more JSX. When writing markup, I endeavour to write it semantically always.",
   },
   {
     icon: css3,
@@ -344,7 +344,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "I make thousands of commits a year, so I am well-acquainted with it. I even got into writing Husky extensions for a while, so I've looked into advanced Git features like submodules and subtrees.",
+      "I make thousands of commits a year, so I am well-acquainted with git. I even got into writing Husky extensions for a while, so I've looked into advanced Git features like submodules and subtrees.",
   },
   {
     icon: githubOctocat,
