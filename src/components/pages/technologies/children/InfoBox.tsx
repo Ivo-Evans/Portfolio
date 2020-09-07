@@ -30,15 +30,18 @@ export default function InfoBox({
         {links.map((link, index) => (
           <>
             {!!index && " | "}
-            <a href={link.link}>{link.title}</a>
+            <a key={link.title} href={link.link}>{link.title}</a>
           </>
         ))}
       </>
     );
   }
+
+
+
   return (
     <SwitchTransition mode="out-in">
-      <CSSTransition key={name} classNames="tech-fade" timeout={200}>
+      <CSSTransition key={name} classNames="tech-fade" timeout={200} >
         <article className="technologies__infobox">
           <h2 className="infobox__title">{name}</h2>
           <div className="infobox__icon-box">

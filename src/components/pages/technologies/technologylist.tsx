@@ -12,7 +12,7 @@ import mongodbIcon from "@iconify/icons-cib/mongodb";
 import graphqlIcon from "@iconify/icons-logos/graphql";
 import reactIcon from "@iconify/icons-logos/react";
 import gatsbyIcon from "@iconify/icons-logos/gatsby";
-import materialUi from "@iconify/icons-logos/material-ui";
+// import materialUi from "@iconify/icons-logos/material-ui";
 import styledComponents from "@iconify/icons-simple-icons/styled-components";
 import storybookIcon from "@iconify/icons-logos/storybook-icon";
 import jestIcon from "@iconify/icons-logos/jest";
@@ -257,7 +257,7 @@ const technologies: types.technology[] = [
     experience: 5,
     interest: 5,
     comment:
-      "Postman is a solid option for API testing and development, for which I use a mixture of Postman, cURL and Insomnia as suits my needs.",
+      "Postman is a solid option for API testing and development. In truth I use a mixture of Postman, cURL and Insomnia as suits my needs.",
     links: [projects.citadelsApi],
   },
   {
