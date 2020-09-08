@@ -2,19 +2,19 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default [
-  <NavLink activeClassName="link--disabled" exact to="/">
+  <NavLink key="home" activeClassName="link--disabled" exact to="/">
     Home
   </NavLink>,
-  <NavLink activeClassName="link--disabled" to="/about">
+  <NavLink key="about" activeClassName="link--disabled" to="/about">
     About Me
   </NavLink>,
-  <NavLink activeClassName="link--disabled" to="/technologies">
+  <NavLink key="stack" activeClassName="link--disabled" to="/technologies">
       My Stack
     </NavLink>,
-  <NavLink activeClassName="link--disabled" to="/work">
+  <NavLink key="work" activeClassName="link--disabled" to="/work">
     My Work
   </NavLink>,
-  <NavLink activeClassName="link--disabled" to="/contact">
+  <NavLink key="contact" activeClassName="link--disabled" to="/contact">
     Contact
   </NavLink>,
 //   <a

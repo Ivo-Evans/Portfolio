@@ -3,12 +3,16 @@ import React from "react";
 
 import Page from "../../Page/Page";
 import Project from "./Project";
+import useWindowHeightMinusNav from '../../../hooks/useWindowHeightMinusNav'
 
 import humanibaseImage from "../../../assets/images/projects/humanibase_cropped.png";
 import apiImage from "../../../assets/images/projects/api_cropped.jpg";
 import cardleyImage from "../../../assets/images/projects/cardley_cropped.png";
 
 export default function Work({ classInjection }: ClassInjectionType) {
+    const projectHeight = useWindowHeightMinusNav()
+    // Project component which takes minHeight prop from Work and manually injects it into css. It will be a display flex with centering. Inside it will be a ProjectDetail component. ProjectDetail should take content as a domfrag so that different components can use links in the text and stuff. They should take a tech stack, a title and an image as props too. 
+    
   return (
     <Page classInjection={classInjection}>
       <Project

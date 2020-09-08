@@ -196,7 +196,7 @@ const technologies: types.technology[] = [
       name: "GraphQL",
       experience: 5,
       interest: 5,
-      comment: "GraphQL is a nice query language, and something that web development, frankly, needs. REST is inefficient, but it would be insanity to make raw queries to the database. GraphQL provides a standardised syntax for information interchange between modern front and back ends, and for that, it is invaluable.",
+      comment: "GraphQL is a nice query language, and something that web development (in my opinion) needs. REST can be unresponsive to changing or diverse requirements - but it would be insanity to make raw queries to the database. GraphQL provides a standardised syntax for information interchange between modern front and back ends, and for that, it is invaluable.",
       links: [projects.wla]
   },
   {
@@ -214,7 +214,7 @@ const technologies: types.technology[] = [
     experience: 3,
     interest: 4,
     comment:
-      "Developer experience is by and large fantastic with Gatsby, and I value the ability to easily create static sites with React that it allows me.",
+      "Developer experience is by and large fantastic with Gatsby, and I value the ability to easily create React static sites that it gives me.",
     links: [projects.wla],
   },
     // {
