@@ -2,20 +2,38 @@ import React from "react";
 // import "../page.css";
 
 import Page from "../../Page/Page";
-import Project from "./Project";
+import Project from "./Project/Project";
 import useWindowHeightMinusNav from '../../../hooks/useWindowHeightMinusNav'
+import useWindowDimensions from '../../../hooks/useWindowDimensions'
 
-import humanibaseImage from "../../../assets/images/projects/humanibase_cropped.png";
-import apiImage from "../../../assets/images/projects/api_cropped.jpg";
-import cardleyImage from "../../../assets/images/projects/cardley_cropped.png";
+
+import copy from "./work.copy"
 
 export default function Work({ classInjection }: ClassInjectionType) {
-    const projectHeight = useWindowHeightMinusNav()
-    // Project component which takes minHeight prop from Work and manually injects it into css. It will be a display flex with centering. Inside it will be a ProjectDetail component. ProjectDetail should take content as a domfrag so that different components can use links in the text and stuff. They should take a tech stack, a title and an image as props too. 
+    const [firstProjectHeight, ] = React.useState(useWindowHeightMinusNav())
+    // const firstProjectHeight = useWindowHeightMinusNav()
+    console.log("Work -> firstProjectHeight", firstProjectHeight)
+    const genericProjectHeight = useWindowDimensions()?.height
+    console.log("Work -> genericProjectHeight", genericProjectHeight)
+
     
   return (
     <Page classInjection={classInjection}>
-      <Project
+        {copy.map((project, index) => {
+            return (
+            <Project
+                key={project.title}
+                minHeight={index ? genericProjectHeight : firstProjectHeight}
+                title={project.title}
+                image={project.image}
+                link={project.link}
+                tech={project.tech}
+                content={project.content}
+            />
+        )})}
+        {/* <Project minHeight={firstProjectHeight} />
+        <Project minHeight={genericProjectHeight} /> */}
+      {/* <Project
         name="Humanibase"
         description="Humanibase is a platform for hosting and uploading audio workshops for those in refugee camps. We developed it for Zaatari Radio, which operates a radio station across Jordan and London."
         tech={["React", "Lambda functions", "Airtable"]}
@@ -37,7 +55,7 @@ export default function Work({ classInjection }: ClassInjectionType) {
         picture={cardleyImage}
         codeLink="https://github.com/fac19/cardley"
         deployLink="https://cardley.netlify.app/"
-      />
+      /> */}
     </Page>
   );
 }
