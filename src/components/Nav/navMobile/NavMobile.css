@@ -1,16 +1,14 @@
-
-
 .page--white .nav--mobile a::before,
 .page--black .nav--mobile a::before {
   top: 1.125em;
 }
 
 .page--white .nav--mobile {
-    background-color: var(--page--white_bg);
+  background-color: var(--page--white_bg);
 }
 
 .page--black .nav--mobile {
-    background-color: var(--page--black_bg);
+  background-color: var(--page--black_bg);
 }
 
 .nav--mobile {

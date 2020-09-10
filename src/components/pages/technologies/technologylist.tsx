@@ -31,7 +31,6 @@ import githubOctocat from "@iconify/icons-logos/github-octocat";
 import figmaIcon from "@iconify/icons-logos/figma";
 import jiraIcon from "@iconify/icons-logos/jira";
 
-
 import * as types from "./technologies.types";
 
 const projects: types.projects = {
@@ -153,15 +152,15 @@ const technologies: types.technology[] = [
       "A lot of my projects are backed, ultimately, by PostgreSQL, the reliable elephant supporting technologies higher up in the stack. I prefer to use relational to noSQL databases where possible - I like it when things make sense.",
     links: [projects.cardleyApi, projects.snippetsOfCode],
   },
-    {
-      icon: mongodbIcon,
-      name: "MongoDB",
-      experience: 5,
-      interest: 5,
-      comment:
-        "MongoDB is the technology on this list that I have the least experience with, although I did make a side-project API with it. I have a functional understanding of using documents and collections, and I'm not afraid to reach for a noSQL database like Mongo if the data is inherently unstructured, or is structured as a tree.",
-      links: [projects.citadelsApi],
-    },
+  {
+    icon: mongodbIcon,
+    name: "MongoDB",
+    experience: 5,
+    interest: 5,
+    comment:
+      "MongoDB is the technology on this list that I have the least experience with, although I did make a side-project API with it. I have a functional understanding of using documents and collections, and I'm not afraid to reach for a noSQL database like Mongo if the data is inherently unstructured, or is structured as a tree.",
+    links: [projects.citadelsApi],
+  },
   {
     icon: nodejsIcon,
     name: "Node.JS",
@@ -192,12 +191,13 @@ const technologies: types.technology[] = [
     links: [projects.citadelsApi],
   },
   {
-      icon: graphqlIcon,
-      name: "GraphQL",
-      experience: 5,
-      interest: 5,
-      comment: "GraphQL is a nice query language, and something that web development (in my opinion) needs. REST can be unresponsive to changing or diverse requirements - but it would be insanity to make raw queries to the database. GraphQL provides a standardised syntax for information interchange between modern front and back ends, and for that, it is invaluable.",
-      links: [projects.wla]
+    icon: graphqlIcon,
+    name: "GraphQL",
+    experience: 5,
+    interest: 5,
+    comment:
+      "GraphQL is a nice query language, and something that web development (in my opinion) needs. REST can be unresponsive to changing or diverse requirements - but it would be insanity to make raw queries to the database. GraphQL provides a standardised syntax for information interchange between modern front and back ends, and for that, it is invaluable.",
+    links: [projects.wla],
   },
   {
     icon: reactIcon,
@@ -217,15 +217,6 @@ const technologies: types.technology[] = [
       "Developer experience is by and large fantastic with Gatsby, and I value the ability to easily create React static sites that it gives me.",
     links: [projects.wla],
   },
-    // {
-    //   icon: materialUi,
-    //   name: "Material UI",
-    //   experience: 5,
-    //   interest: 5,
-    //   comment:
-    //     "Material UI can be helpful for developing an MVP. For a bespoke experience, however, I prefer to write my own components.",
-    //   links: [projects.cardleyFrontend],
-    // },
   {
     icon: styledComponents,
     name: "Styled Components",

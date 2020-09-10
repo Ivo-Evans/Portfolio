@@ -1,5 +1,5 @@
 .bio h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .bio p {
@@ -7,7 +7,7 @@
 }
 
 .bio img {
-    max-width: 33%;
-    float: left;
-    padding-right: 1em;
+  max-width: 33%;
+  float: left;
+  padding-right: 1em;
 }

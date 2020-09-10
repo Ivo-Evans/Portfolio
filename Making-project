@@ -1,0 +1,33 @@
+What I'm going to need?
+
+an array of objects containing state for components, including JSX
+
+A Project component, which is the whole page, and contains two components, NextArrow and ProjectDetail, and aligns them as a flex column
+
+A NextArrow component, which takes a 'to' prop and sets refs accordingly - on hover it goes yellow
+
+A PojectDetail component, which is an article, and which contains two components
+
+A phone component which takes:
+- colour (black or white)
+- an image 
+- A link 
+- some alt text (can be title)
+
+A copy component, which takes
+- A title
+- An array of tech
+- Content, a domfrag
+
+Build it from the bottom up, with Storybook, first copy and phone, then ProjectDetail, then put it all together
+
+
+
+Sorting out this context issue:
+- create and export the context in the src/context.tsx file
+- I think the lowest place you can put the context provider is in the Layout component
+- After that you'll need to set it in the Nav component <- this is the puzzle right now
+- once you've done that you can access it in Project with myVal = useContext(ImportedContext)
+
+
+OOOOOH, this problem only exists if you refresh the page

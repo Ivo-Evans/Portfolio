@@ -8,23 +8,21 @@ const ProjectInformation = ({
   link,
   tech,
   content,
-}: IProjectInformation) => {
-  return (
-    <article className="project">
-      <a className="project__image" href={link}>
-        <img className="project__image" src={image} alt={title} />
-      </a>
-      <div>
-        <div className="project__titlebar">
-          <a className="project__title" href={link}>
-            <h2>{title}</h2>
-          </a>
-          <p>{tech.join(", ")}</p>
-        </div>
-        <div className="project__content">{content}</div>
+}: IProjectInformation) => (
+  <article className="project">
+    <a className="project__image" href={link}>
+      <img className="project__image" src={image} alt={title} />
+    </a>
+    <div>
+      <div className="project__titlebar">
+        <a className="project__title" href={link}>
+          <h2>{title}</h2>
+        </a>
+        <p>{tech.join(", ")}</p>
       </div>
-    </article>
-  );
-};
+      <div className="project__content">{content}</div>
+    </div>
+  </article>
+);
 
 export default ProjectInformation;

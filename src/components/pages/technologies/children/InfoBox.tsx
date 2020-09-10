@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 import "./InfoBox.css";
 import "../../../../animations.css";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
-import * as types from "../technologies.types"
+import * as types from "../technologies.types";
 
 export default function InfoBox({
   icon,
@@ -30,18 +30,18 @@ export default function InfoBox({
         {links.map((link, index) => (
           <>
             {!!index && " | "}
-            <a key={link.title} href={link.link}>{link.title}</a>
+            <a key={link.title} href={link.link}>
+              {link.title}
+            </a>
           </>
         ))}
       </>
     );
   }
 
-
-
   return (
     <SwitchTransition mode="out-in">
-      <CSSTransition key={name} classNames="tech-fade" timeout={200} >
+      <CSSTransition key={name} classNames="tech-fade" timeout={200}>
         <article className="technologies__infobox">
           <h2 className="infobox__title">{name}</h2>
           <div className="infobox__icon-box">

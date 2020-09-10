@@ -4,10 +4,10 @@ import Nav from "../Nav/Nav";
 import "./Page.css";
 
 type PageType = ClassInjectionType & {
-    children: React.ReactNode | React.ReactNode[];
-}
+  children: React.ReactNode | React.ReactNode[];
+};
 
-export default function Page ({ classInjection, children }: PageType) {
+export default function Page({ classInjection, children }: PageType) {
   return (
     <div className={classInjection}>
       <Nav />

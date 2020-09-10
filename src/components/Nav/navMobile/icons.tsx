@@ -3,7 +3,7 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "../../../animations.css";
 import "./icons.css";
 
-type IconProps = { open: boolean};
+type IconProps = { open: boolean };
 
 export default function Icons({ open }: IconProps) {
   return (

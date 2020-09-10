@@ -1,30 +1,32 @@
-/* 
+/*
 TOP LEVEL DOC COMMENT
 
 The purpose of this component is to animate transitions between pages.
-During the transition two pages are visible on the screen, but the 
+During the transition two pages are visible on the screen, but the
 oncoming page must have opposite styling to the exiting page. For this
-reason you need a more involved approach than a global switch for styles. This function is both a React Router Switch statement with RTC animations, and mediates between pages re class ownership.
+reason you need a more involved approach than a global switch for styles.
+This function is both a React Router Switch statement with RTC animations,
+and mediates between pages re class ownership.
 */
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import About from "./pages/about/about";
-import Technologies from "./pages/technologies/technologies"
+import Technologies from "./pages/technologies/technologies";
 import Home from "./pages/home/home";
 import Work from "./pages/work/work";
 import Contact from "./pages/contact/contact";
 
 type routeClasses = {
-    [index:string]: string
-}
+  [index: string]: string;
+};
 
 type stateType = {
-    routes: routeClasses,
-    currentPage: string,
-    notCurrentPage: string
-}
+  routes: routeClasses;
+  currentPage: string;
+  notCurrentPage: string;
+};
 
 const initialState = {
   routes: {
@@ -37,7 +39,6 @@ const initialState = {
   currentPage: "page--black",
   notCurrentPage: "page--white",
 };
-
 
 export default function AnimatedSwitch() {
   const location = useLocation();

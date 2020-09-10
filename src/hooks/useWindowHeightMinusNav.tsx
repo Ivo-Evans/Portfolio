@@ -1,11 +1,14 @@
 // measures the space between component ref passed in as prop and the bottom of the screen.
-import { useState, useEffect } from "react";
-import { getWindowDimensions } from "./useWindowDimensions"
+import { useEffect } from "react";
+import { getWindowDimensions } from "./useWindowDimensions";
 
 function getNavHeight() {
   const nav: HTMLElement | null = document.querySelector(".nav");
   if (!nav) {
-    return 0;
+    // if you don't know, guess (mobile doesn't matter much because entries will i
+    // in practice be >100vh, and this px sets a min-height)
+    // once dom content is loaded, you will know
+    return 145;
   }
   const top = nav?.offsetTop;
   const height = nav?.offsetHeight;
@@ -13,21 +16,19 @@ function getNavHeight() {
 }
 
 function getHeightMinusNav() {
-    const yOffset = getNavHeight()
-    const height = getWindowDimensions()?.height
-    return height - yOffset;
+  const yOffset = getNavHeight();
+  const height = getWindowDimensions()?.height;
+  return height - yOffset;
 }
 
-export default function useWindowHeightMinusNav() {
-  const [heightMinusNav, setHeightMinusNav] = useState(getHeightMinusNav());
-
+export default function useWindowHeightMinusNav(setter: Function) {
   useEffect(() => {
-      function handleResize() {
-        setHeightMinusNav(getHeightMinusNav())
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  return heightMinusNav
+    const computeFinalSize = () => setter(getHeightMinusNav());
+    window.addEventListener("DOMContentLoaded", computeFinalSize);
+    window.addEventListener("resize", computeFinalSize);
+    return () => {
+      window.removeEventListener("DOMContentLoaded", computeFinalSize);
+      window.removeEventListener("resize", computeFinalSize);
+    };
+  }, [setter]);
 }

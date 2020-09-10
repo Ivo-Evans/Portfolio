@@ -13,35 +13,35 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
     {},
   );
   const infoBoxRef = React.useRef<null | HTMLDivElement>(null);
-  const scrollToBottom = () => infoBoxRef?.current?.scrollIntoView({
-    behavior: "smooth",
-  });
+  const scrollToBottom = () => {
+    return infoBoxRef?.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <Page classInjection={classInjection}>
       <article className="technologies__list">
-        {technologyList.map((technology) => {
-          return (
-            <Logo
-              onClick={() => {
+        {technologyList.map((technology) => (
+          <Logo
+            onClick={() => {
+              setSelectedTech({ enabled: true, ...technology });
+              scrollToBottom();
+            }}
+            onKeyPress={(e: React.KeyboardEvent) => {
+              if (e.key === "Enter" || e.key === " ") {
                 setSelectedTech({ enabled: true, ...technology });
-                scrollToBottom()
-              }}
-              onKeyPress={(e: React.KeyboardEvent) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  setSelectedTech({ enabled: true, ...technology });
-                  scrollToBottom()
-                }
-              }}
-              icon={technology.icon}
-              description={technology.name}
-              extraClasses={`${technology.classModifier} ${
-                selectedTech.name === technology.name &&
-                "tech-list__icon--selected"
-              }`}
-              height={technology.heightModifier}
-            />
-          );
-        })}
+                scrollToBottom();
+              }
+            }}
+            icon={technology.icon}
+            description={technology.name}
+            extraClasses={`${technology.classModifier} ${
+              selectedTech.name === technology.name &&
+              "tech-list__icon--selected"
+            }`}
+            height={technology.heightModifier}
+          />
+        ))}
       </article>
 
       {typeof selectedTech === "object" && (

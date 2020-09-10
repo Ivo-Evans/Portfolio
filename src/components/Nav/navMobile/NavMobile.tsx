@@ -2,7 +2,7 @@ import React from "react";
 import Icons from "./icons";
 import "./icons.css";
 import "./NavMobile.css";
-import NavItems from "./NavItems"
+import NavItems from "./NavItems";
 
 export default function NavMobile() {
   const [open, setOpen] = React.useState(false);

@@ -9,19 +9,19 @@ export default [
     About Me
   </NavLink>,
   <NavLink key="stack" activeClassName="link--disabled" to="/technologies">
-      My Stack
-    </NavLink>,
+    My Stack
+  </NavLink>,
   <NavLink key="work" activeClassName="link--disabled" to="/work">
     My Work
   </NavLink>,
   <NavLink key="contact" activeClassName="link--disabled" to="/contact">
     Contact
   </NavLink>,
-//   <a
-//     target="_blank"
-//     rel="noopener noreferrer"
-//     href="https://github.com/Ivo-Evans"
-//   >
-//     GitHub
-//   </a>,
+  //   <a
+  //     target="_blank"
+  //     rel="noopener noreferrer"
+  //     href="https://github.com/Ivo-Evans"
+  //   >
+  //     GitHub
+  //   </a>,
 ];

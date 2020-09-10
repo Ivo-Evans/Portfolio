@@ -33,8 +33,7 @@ code {
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Regular"),
-    url(./assets/fonts/Roboto-Regular.woff);
+  src: local("Roboto Regular"), url(./assets/fonts/Roboto-Regular.woff);
 }
 
 /* the breakpoint is also coded in JS in the component Nav */
