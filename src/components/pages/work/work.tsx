@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-// import "../page.css";
 
 import Page from "../../Page/Page";
 import Project from "./Project/Project";
@@ -10,8 +9,7 @@ import copy from "./work.copy";
 
 export default function Work({ classInjection }: ClassInjectionType) {
   const genericProjectHeight = useWindowDimensions()?.height;
-  const [firstProjectHeight, setFirstProjectHeight] = React.useState(0);
-  useWindowHeightMinusNav(setFirstProjectHeight);
+  const firstProjectHeight = useWindowHeightMinusNav();
   const [currentProject, setCurrentProject] = useState(0);
   const articleRef = useRef<HTMLElement | null>(null);
   const articles = copy.map((article, index) => {

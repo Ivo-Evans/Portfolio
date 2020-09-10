@@ -23,6 +23,7 @@ export default function Technologies({ classInjection }: ClassInjectionType) {
       <article className="technologies__list">
         {technologyList.map((technology) => (
           <Logo
+            key={technology.name}
             onClick={() => {
               setSelectedTech({ enabled: true, ...technology });
               scrollToBottom();

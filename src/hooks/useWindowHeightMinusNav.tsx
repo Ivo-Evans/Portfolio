@@ -1,12 +1,12 @@
 // measures the space between component ref passed in as prop and the bottom of the screen.
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getWindowDimensions } from "./useWindowDimensions";
 
 function getNavHeight() {
   const nav: HTMLElement | null = document.querySelector(".nav");
   if (!nav) {
     // if you don't know, guess (mobile doesn't matter much because entries will
-    // in practice be >100vh, and this px sets a min-height)
+    // in practice be >100vh, and this px helps set a min-height)
     // Also, once dom content is loaded, this value will be updated.
     return 145;
   }
@@ -21,9 +21,10 @@ function getHeightMinusNav() {
   return height - yOffset;
 }
 
-export default function useWindowHeightMinusNav(setter: Function) {
+export default function useWindowHeightMinusNav() {
+    const [height, setHeight] = useState(0);
   useEffect(() => {
-    const computeFinalSize = () => setter(getHeightMinusNav());
+    const computeFinalSize = () => setHeight(getHeightMinusNav());
     // call once on render, for, e.g., page transitions
     computeFinalSize();
     // call again in case of page refresh or page reload
@@ -33,5 +34,6 @@ export default function useWindowHeightMinusNav(setter: Function) {
       window.removeEventListener("DOMContentLoaded", computeFinalSize);
       window.removeEventListener("resize", computeFinalSize);
     };
-  }, [setter]);
+  }, [setHeight]);
+  return height
 }
