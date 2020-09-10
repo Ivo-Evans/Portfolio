@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.project-section + .project-section {
+    margin-top: 100vh;
+}
+
 .project-section__arrow {
   margin-top: 5vh;
   height: 3em;
