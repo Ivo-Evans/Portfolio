@@ -12,7 +12,6 @@ export default function Work({ classInjection }: ClassInjectionType) {
   const genericProjectHeight = useWindowDimensions()?.height;
   const [firstProjectHeight, setFirstProjectHeight] = React.useState(0);
   useWindowHeightMinusNav(setFirstProjectHeight);
-  console.log(firstProjectHeight);
   return (
     <Page classInjection={classInjection}>
       {copy.map((project, index) => (

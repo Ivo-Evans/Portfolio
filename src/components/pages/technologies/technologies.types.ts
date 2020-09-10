@@ -5,8 +5,8 @@ export type logoType = {
   description?: string;
   height: string;
   extraClasses?: string;
-  onClick: any;
-  onKeyPress: any;
+  onClick: Function;
+  onKeyPress: Function;
 };
 
 export type project = {
