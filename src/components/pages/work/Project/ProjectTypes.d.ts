@@ -8,4 +8,8 @@ export interface IProjectInformation {
 
 export interface IProject extends IProjectInformation {
   minHeight: number;
+  nextPage: string;
+  sectionRef: React.MutableRefObject | null;
+  incrementAndScrollMouse: React.MouseEventHandler;
+  incrementAndScrollKeyboard: React.KeyboardEventHandler;
 }

@@ -13,11 +13,11 @@ export default [
       <>
         <p>
           SkillsWest. London is a project of the West London Alliance (WLA), a
-          group of councils in West London. WLA asked for a website to collate
-          courses in the emerging green construction sector. Me and a partner
-          created a static site with Gatsby. Among other things, it represents
-          many-many relations between career paths and courses, and uses public
-          APIs to dynamically generate data which we visualise with recharts.
+          group of local councils. WLA asked for a website to collate courses in
+          the emerging green construction sector. Me and a partner created a
+          static site with Gatsby. Among other things, it represents many-many
+          relations between career paths and courses, and uses public APIs to
+          dynamically generate data which we visualise with recharts.
         </p>
         <p>
           On the backend, my responsibilities included deploying a cluster of

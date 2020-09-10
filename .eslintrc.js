@@ -36,5 +36,7 @@ module.exports = {
     "arrow-body-style": 0,
     "@typescript-eslint/interface-name-prefix": 0,
     "operator-linebreak": 0,
+    "no-unused-expressions": 0,
+    "@typescript-eslint/no-unused-expressions": 2,
   },
 };
