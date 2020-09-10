@@ -60,7 +60,11 @@ code {
   .technologies__infobox > * {
     margin: 1em auto !important;
   }
-  .page {
-      margin-top: var(--nav--mobile-closed-height)
+
+  .page--white {
+    border-top: var(--nav--mobile-closed-height) solid var(--page--white_bg);
+  }
+  .page--black {
+    border-top: var(--nav--mobile-closed-height) solid var(--page--black_bg);
   }
 }
