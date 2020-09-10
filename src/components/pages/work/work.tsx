@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 
 import Page from "../../Page/Page";
 import Project from "./Project/Project";
@@ -10,22 +10,18 @@ import copy from "./work.copy";
 export default function Work({ classInjection }: ClassInjectionType) {
   const genericProjectHeight = useWindowDimensions()?.height;
   const firstProjectHeight = useWindowHeightMinusNav();
-  const [currentProject, setCurrentProject] = useState(0);
-  const articleRef = useRef<HTMLElement | null>(null);
-  const articles = copy.map((article, index) => {
-    const sectionRef = index === currentProject + 1 ? articleRef : null;
-    return { ...article, sectionRef };
-  });
-  const incrementAndScroll = () => {
-    setCurrentProject(currentProject + 1);
-    if (articleRef === null) {
+  const articleRef = useRef<HTMLElement[] | []>([]);
+
+  const scroll = (index: number) => {
+    const nextElement = articleRef.current[index + 1];
+    if (!nextElement) {
       return;
     }
-    articleRef?.current?.scrollIntoView({ behavior: "smooth" });
+    nextElement.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <Page classInjection={classInjection}>
-      {articles.map((project, index) => (
+      {copy.map((project, index) => (
         <Project
           key={project.title}
           minHeight={index ? genericProjectHeight : firstProjectHeight}
@@ -35,11 +31,13 @@ export default function Work({ classInjection }: ClassInjectionType) {
           tech={project.tech}
           content={project.content}
           nextPage={copy[index + 1] ? "" : "/contact"}
-          sectionRef={project.sectionRef}
-          incrementAndScrollMouse={incrementAndScroll}
-          incrementAndScrollKeyboard={(e) => {
+          sectionRef={(el: HTMLElement) => {
+            articleRef.current[index] = el;
+          }}
+          scrollMouse={() => scroll(index)}
+          scrollKeyboard={(e) => {
             if (e.key === "Enter" || e.key === " ") {
-              incrementAndScroll();
+              scroll(index);
             }
           }}
         />

@@ -15,8 +15,8 @@ const Project = ({
   content,
   nextPage,
   sectionRef,
-  incrementAndScrollMouse,
-  incrementAndScrollKeyboard,
+  scrollMouse,
+  scrollKeyboard,
 }: IProject) => (
   <section
     ref={sectionRef}
@@ -38,8 +38,8 @@ const Project = ({
       <div
         role="button"
         tabIndex={0}
-        onClick={incrementAndScrollMouse}
-        onKeyPress={incrementAndScrollKeyboard}
+        onClick={scrollMouse}
+        onKeyPress={scrollKeyboard}
       >
         <Icon className="project-section__arrow" icon={arrowDown} />
       </div>
