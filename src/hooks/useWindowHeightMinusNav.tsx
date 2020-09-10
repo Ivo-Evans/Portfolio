@@ -5,9 +5,9 @@ import { getWindowDimensions } from "./useWindowDimensions";
 function getNavHeight() {
   const nav: HTMLElement | null = document.querySelector(".nav");
   if (!nav) {
-    // if you don't know, guess (mobile doesn't matter much because entries will i
+    // if you don't know, guess (mobile doesn't matter much because entries will
     // in practice be >100vh, and this px sets a min-height)
-    // once dom content is loaded, you will know
+    // Also, once dom content is loaded, this value will be updated.
     return 145;
   }
   const top = nav?.offsetTop;
@@ -24,6 +24,9 @@ function getHeightMinusNav() {
 export default function useWindowHeightMinusNav(setter: Function) {
   useEffect(() => {
     const computeFinalSize = () => setter(getHeightMinusNav());
+    // call once on render, for, e.g., page transitions
+    computeFinalSize();
+    // call again in case of page refresh or page reload
     window.addEventListener("DOMContentLoaded", computeFinalSize);
     window.addEventListener("resize", computeFinalSize);
     return () => {

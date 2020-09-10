@@ -7,6 +7,7 @@
 }
 
 .bio img {
+    max-height: 21em;
   max-width: 33%;
   float: left;
   padding-right: 1em;

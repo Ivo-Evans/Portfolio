@@ -19,13 +19,11 @@ export default function Bio() {
       <p>
         In my spare time I like cycling, climbing and coding personal projects.
         I also enjoy science fiction novels, and I lived in Istanbul for a year.
-        I have a first at BA level philosophy, and a distinction at MA level. My
-        academic background, including in logic, has been a great help
-        programming.
+        I have a first at BA level philosophy, and a distinction at MA level.
       </p>
       <p>
         I&apos;m looking forward to joining a progressive team where I can
-        continue to learn, and which is
+        continue to learn, and which is{" "}
         <strong>making cool products</strong>.
       </p>
       <p>

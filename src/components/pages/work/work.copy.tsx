@@ -14,10 +14,11 @@ export default [
         <p>
           SkillsWest. London is a project of the West London Alliance (WLA), a
           group of local councils. WLA asked for a website to collate courses in
-          the emerging green construction sector. Me and a partner created a
-          static site with Gatsby. Among other things, it represents many-many
-          relations between career paths and courses, and uses public APIs to
-          dynamically generate data which we visualise with recharts.
+          the emerging green construction sector. Me and a <a href="akomiqaia.github.io">partner</a> created a
+          static site with Gatsby, hooked up to a headless CMS with webhooks.
+          The site, among other things, represents many-many relations between career
+          paths and courses, and uses public APIs to dynamically generate data
+          which we visualise with recharts.
         </p>
         <p>
           On the backend, my responsibilities included deploying a cluster of
@@ -50,8 +51,8 @@ export default [
         <p>
           Humanibase is a platform for hosting and uploading audio workshops for
           those in refugee camps. We made it for Zaatari Radio, a radio station
-          based between London and Zaatari, Jordan, whose normal efforts to run
-          radio workshops was impeded by COVID-19. We went for a lightweight
+          based between London and Zaatari (Jordan), whose normal efforts to run
+          radio workshops were impeded by COVID-19. We went for a lightweight
           JAMstack: a React app that talks to the DaaS Airtable via serverless
           functions.
         </p>
