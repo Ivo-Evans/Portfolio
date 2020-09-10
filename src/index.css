@@ -18,6 +18,9 @@ body {
   --page--white_bg: #fff;
   --page--white_fg: #000;
   --page--white_highlight: #b30f00;
+
+  /* Positioning */
+  --nav--mobile-closed-height: 1.35em;
 }
 
 code {
@@ -56,5 +59,8 @@ code {
   }
   .technologies__infobox > * {
     margin: 1em auto !important;
+  }
+  .page {
+      margin-top: var(--nav--mobile-closed-height)
   }
 }

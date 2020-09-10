@@ -22,12 +22,12 @@ function getHeightMinusNav() {
 }
 
 export default function useWindowHeightMinusNav() {
-    const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(0);
   useEffect(() => {
     const computeFinalSize = () => setHeight(getHeightMinusNav());
     // call once on render, for, e.g., page transitions
     computeFinalSize();
-    // call again in case of page refresh or page reload
+    // call again in case of page refresh or page resize
     window.addEventListener("DOMContentLoaded", computeFinalSize);
     window.addEventListener("resize", computeFinalSize);
     return () => {
@@ -35,5 +35,5 @@ export default function useWindowHeightMinusNav() {
       window.removeEventListener("resize", computeFinalSize);
     };
   }, [setHeight]);
-  return height
+  return height;
 }
