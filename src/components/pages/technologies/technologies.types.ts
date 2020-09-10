@@ -1,12 +1,13 @@
 import { IconifyIcon } from "@iconify/types";
+import React from "react";
 
 export type logoType = {
   icon: IconifyIcon;
   description?: string;
   height: string;
   extraClasses?: string;
-  onClick: Function;
-  onKeyPress: Function;
+  onClick: React.MouseEventHandler;
+  onKeyPress: React.KeyboardEventHandler;
 };
 
 export type project = {
