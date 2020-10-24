@@ -1,5 +1,5 @@
 // measures the space between component ref passed in as prop and the bottom of the screen.
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { getWindowDimensions } from "./useWindowDimensions";
 
 function getNavHeight() {
@@ -23,7 +23,7 @@ function getHeightMinusNav() {
 
 export default function useWindowHeightMinusNav() {
   const [height, setHeight] = useState(0);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const computeFinalSize = () => setHeight(getHeightMinusNav());
     // call once on render, for, e.g., page transitions
     computeFinalSize();

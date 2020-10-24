@@ -8,8 +8,8 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import copy from "./work.copy";
 
 export default function Work({ classInjection }: ClassInjectionType) {
-  const genericProjectHeight = useWindowDimensions()?.height;
   const firstProjectHeight = useWindowHeightMinusNav();
+  const genericProjectHeight = useWindowDimensions()?.height;
   const articleRef = useRef<HTMLElement[] | []>([]);
 
   const scroll = (index: number) => {
@@ -45,3 +45,4 @@ export default function Work({ classInjection }: ClassInjectionType) {
     </Page>
   );
 }
+// so, this ref thing works. But you have to wonder _why_. elements are effectively pushed on to articleRef.current with the function nextPage in a child component. At (ostensibly) the _same time_ a click handler is registered on each child component which asks about the _next_ element in articleRef.current. When the function is called, I would have thought that, as a closure, it would remember its context and not know about the elements later in the list which hadn't been created yet. Like, in vanilla JS, you couldn't map over an array, monotonically creating another array as a side effect, and then at element n access element n + 1 of the side effect array.

@@ -14,11 +14,12 @@ export default [
         <p>
           SkillsWest. London is a project of the West London Alliance (WLA), a
           group of local councils. WLA asked for a website to collate courses in
-          the emerging green construction sector. Me and a <a href="akomiqaia.github.io">partner</a> created a
-          static site with Gatsby, hooked up to a headless CMS with webhooks.
-          The site, among other things, represents many-many relations between career
-          paths and courses, and uses public APIs to dynamically generate data
-          which we visualise with recharts.
+          the emerging green construction sector. Me and a{" "}
+          <a href="akomiqaia.github.io">partner</a> created a static site with
+          Gatsby, hooked up to a headless CMS with webhooks. The site, among
+          other things, represents many-many relations between career paths and
+          courses, and uses public APIs to dynamically generate data which we
+          visualise with recharts.
         </p>
         <p>
           On the backend, my responsibilities included deploying a cluster of
@@ -57,11 +58,11 @@ export default [
           functions.
         </p>
         <p>
-          I had a big influence in architecting solutions and integrating
+          I had a significant influence in architecting solutions and integrating
           systems. I was responsible for creating a system of getting markdown
           from Airtable, rendering it in the website, and interpolating in audio
           resources. I also handled file/pdf flow through the application, from
-          its placement in the database to its final download by a user from the
+          its placement in the database to its final download by a user on the
           frontend.
         </p>
         <p>
@@ -96,8 +97,8 @@ export default [
         <p>
           For authentication we hashed passwords using BCrypt, stored the
           results in the database, and checked the hashes when we issued JWTs.
-          The database featured many-many relations and useful build scripts.
-          The backend had good code coverage.
+          The database featured many-many relations and useful build scripts,
+          and the backend had good code coverage.
         </p>
         <p>
           The job of the React app is to provide a UI for the Cardley API and
