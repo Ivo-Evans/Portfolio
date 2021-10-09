@@ -1,7 +1,10 @@
-.technologies__list {
-  margin-top: 3em;
+.technologies {
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
+}
+
+.technologies p {
+  font-size: var(--standard-text-size);
 }
