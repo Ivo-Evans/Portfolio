@@ -1,5 +1,7 @@
 # Ivo Evans's Portfolio
 
+> Note: This site was written when I was right out of Bootcamp, and it was my first time using TypeScript. I think the UI is pretty cool, so I've kept it around, but the code could be better.
+
 This is my portfolio site. It's built in react with native CSS. While writing it I developed a set of implicit rules for my CSS, which it might now be helpful to make explicit. If you're developing this after a while, be sure to read them. They might also be interesting if you are an employer looking to hire me.
 
 ## CSS conventions
