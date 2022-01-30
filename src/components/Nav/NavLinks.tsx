@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import "./NavLink.css";
 
 export default [
   <NavLink key="home" activeClassName="link--disabled" exact to="/">
@@ -18,7 +20,9 @@ export default [
     target="_blank"
     rel="noopener noreferrer"
     href="https://github.com/Ivo-Evans"
+    className="link"
   >
-    GitHub
+    <span>GitHub</span>
+    <Icon icon="ic:baseline-open-in-new" color="#8a8a8a" />
   </a>,
 ];
