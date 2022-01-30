@@ -22,7 +22,7 @@ export default [
     href="https://github.com/Ivo-Evans"
     className="link"
   >
-    <span>GitHub</span>
+    <span>My GitHub</span>
     <Icon icon="ic:baseline-open-in-new" color="#8a8a8a" />
   </a>,
 ];

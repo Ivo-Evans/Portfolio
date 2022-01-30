@@ -8,13 +8,11 @@ export default function Home({ classInjection }: ClassInjectionType) {
     <Page classInjection={classInjection}>
       <div className="central-banner">
         <h1 className="strapline">
-          Hi,
-          <br />
-          my name is{" "}
+          Hi there, my name is{" "}
           <Link to="/about" className="strapline__name">
-            Ivo Evans.
-          </Link>{" "}
-          <br /> I make experiences for the modern web.
+            Ivo Evans
+          </Link>. <br />
+          I make computers do things by writing code.
         </h1>
       </div>
     </Page>
