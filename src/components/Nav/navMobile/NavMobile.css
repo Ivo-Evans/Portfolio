@@ -1,3 +1,7 @@
+.icon {
+  cursor: pointer;
+}
+
 .page--white .nav--mobile a::before,
 .page--black .nav--mobile a::before {
   top: 1.125em;
