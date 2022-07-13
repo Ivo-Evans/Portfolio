@@ -13,7 +13,6 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import About from "./pages/about/about";
-import Technologies from "./pages/technologies/technologies";
 import Home from "./pages/home/home";
 import Contact from "./pages/contact/contact";
 
@@ -30,8 +29,6 @@ type stateType = {
 const initialState = {
   routes: {
     "/": "",
-    "/technologies": "",
-    "/work": "",
     "/about": "",
     "/contact": "",
   },
@@ -84,11 +81,6 @@ export default function AnimatedSwitch() {
           <Route exact path="/about">
             <About
               classInjection={`page page--content ${state.routes["/about"]}`}
-            />
-          </Route>
-          <Route exact path="/technologies">
-            <Technologies
-              classInjection={`page page--content ${state.routes["/technologies"]}`}
             />
           </Route>
           <Route exact path="/contact">

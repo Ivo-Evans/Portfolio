@@ -8,25 +8,32 @@ export default function Bio() {
   return (
     <main className="bio">
       <img src={self} alt="me" />
-      <h1>About Me</h1>
       <p>
-        I'm a full-stack engineer from London and a career changer into tech.
-        After an MA in the philosophy of medicine, where I studied the
-        relationship between drug addiction and psychological freedom, I decided
-        to switch the planned PhD for a bootcamp. Although the masters went
-        well, I think computers fit me better. I enjoy this world where words
-        mean cleanly defined things, but fit together in complex and
-        fascinating ways. I also enjoy how practical programming is.
+        Hey, I&rsquo;m Ivo, a full-stack engineer from London. My work is
+        focused on the JavaScript and TypeScript ecosystem, with fluency in
+        supporting languages such as CSS and SQL. I&rsquo;m comfortable in other
+        high-level programming languages, such as Ruby and Python, too.
       </p>
       <p>
-        In my spare time I enjoy cycling, climbing and reading novels. I lived
-        in Istanbul for a year from 2015 to 2016, including during the build up
-        to an attempted coup.
+        On the frontend, I have professional experience in React, React Native,
+        Vue.js and Svelte; on the backend, Express, Sails.js and the SST
+        framework for AWS Lambda. For DevOps I use AWS, Docker and
+        infrastructure as code tooling such as the AWS CDK.
       </p>
       <p>
-        I'm currently on contract as a full-stack engineer at <a href="https://www.tortoisemedia.com/">Tortoise Media</a>.
+        I&rsquo;m a keen advocate of practices such as type safety, linting and
+        well organised, DRY code. I take pride in what I do and I strive to
+        write code which can be reused when business requirements change or
+        grow. Above all I like to create elegant and well designed engineering
+        solutions.
       </p>
-      <p><Link to="technologies">Read on to learn about the tech I use</Link>.</p>
+      <p>
+        I also do things other than computers! Quite a lot of my leisure
+        activities could have been done before computers were even invented.
+        These include rock climbing, reading books and playing ragtime music on
+        my acoustic guitar. I hope you&rsquo;ll{" "}
+        <Link to="contact">get in touch</Link>.
+      </p>
     </main>
   );
 }
