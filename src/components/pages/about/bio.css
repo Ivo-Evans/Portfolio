@@ -1,16 +1,15 @@
 .bio h1 {
   margin: 0;
-  
 }
 
 .bio p {
-  font-size: var(--standard-text-size);
   margin: 0.5em 0;
+  font-size: var(--standard-text-size);
 }
 
 .bio img {
-  max-height: 21em;
-  max-width: 33%;
+  max-height: 28em;
+  max-width: 50%;
   float: left;
   padding-right: 1em;
 }

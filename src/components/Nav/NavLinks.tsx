@@ -10,13 +10,11 @@ export default [
   <NavLink key="about" activeClassName="link--disabled" to="/about">
     About Me
   </NavLink>,
-  <NavLink key="stack" activeClassName="link--disabled" to="/technologies">
-    My Stack
-  </NavLink>,
   <NavLink key="contact" activeClassName="link--disabled" to="/contact">
     Contact
   </NavLink>,
   <a
+    key="github"
     target="_blank"
     rel="noopener noreferrer"
     href="https://github.com/Ivo-Evans"
