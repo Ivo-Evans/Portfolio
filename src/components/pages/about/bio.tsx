@@ -34,9 +34,6 @@ export default function Bio() {
         my acoustic guitar. I hope you&rsquo;ll{" "}
         <Link to="contact">get in touch</Link>.
       </p>
-      {/* <p>
-        <Link to="contact">Get in touch!</Link>
-      </p> */}
     </main>
   );
 }
